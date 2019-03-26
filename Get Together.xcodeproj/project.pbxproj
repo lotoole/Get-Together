@@ -14,6 +14,8 @@
 		ECBF6D2122482124003F2AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBF6D1F22482124003F2AEF /* LaunchScreen.storyboard */; };
 		ECBF6D2C22482124003F2AEF /* Get_TogetherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D2B22482124003F2AEF /* Get_TogetherTests.swift */; };
 		ECBF6D3722482124003F2AEF /* Get_TogetherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D3622482124003F2AEF /* Get_TogetherUITests.swift */; };
+		ECEA089B224A71AC00FEDEFC /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEA089A224A71AC00FEDEFC /* Mapbox.framework */; };
+		ECEA089C224A71AC00FEDEFC /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECEA089A224A71AC00FEDEFC /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ECEA089D224A71AC00FEDEFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECEA089C224A71AC00FEDEFC /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ECBF6D1322482123003F2AEF /* Get Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF6D1622482123003F2AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		ECBF6D3222482124003F2AEF /* Get TogetherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Get TogetherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF6D3622482124003F2AEF /* Get_TogetherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_TogetherUITests.swift; sourceTree = "<group>"; };
 		ECBF6D3822482124003F2AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEA089A224A71AC00FEDEFC /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEA089B224A71AC00FEDEFC /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 		ECBF6D0A22482123003F2AEF = {
 			isa = PBXGroup;
 			children = (
+				ECEA089A224A71AC00FEDEFC /* Mapbox.framework */,
 				ECBF6D1522482123003F2AEF /* Get Together */,
 				ECBF6D2A22482124003F2AEF /* Get TogetherTests */,
 				ECBF6D3522482124003F2AEF /* Get TogetherUITests */,
@@ -135,6 +154,8 @@
 				ECBF6D0F22482123003F2AEF /* Sources */,
 				ECBF6D1022482123003F2AEF /* Frameworks */,
 				ECBF6D1122482123003F2AEF /* Resources */,
+				ECEA089D224A71AC00FEDEFC /* Embed Frameworks */,
+				ECEA089E224A71B200FEDEFC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +271,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ECEA089E224A71B200FEDEFC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECBF6D0F22482123003F2AEF /* Sources */ = {
@@ -433,6 +474,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Get Together/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +495,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Get Together/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
