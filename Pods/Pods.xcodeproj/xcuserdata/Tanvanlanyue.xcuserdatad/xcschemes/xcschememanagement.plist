@@ -46,6 +46,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>MapboxGeocoder.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Get Together.xcscheme</key>
 		<dict>
 			<key>isShown</key>

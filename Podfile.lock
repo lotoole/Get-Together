@@ -44,6 +44,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.7.0):
     - GoogleUtilities/Logger
+  - MapboxGeocoder.swift (0.10.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -52,6 +53,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Core
+  - MapboxGeocoder.swift (~> 0.10)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -61,6 +63,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - GoogleAppMeasurement
     - GoogleUtilities
+    - MapboxGeocoder.swift
     - nanopb
 
 SPEC CHECKSUMS:
@@ -70,8 +73,9 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: a122b0c258720cf250551bb2bedf48c699f80d90
   GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
   GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
+  MapboxGeocoder.swift: 8cff5dddf98d87838509bf80a5bce5f1d0cf8393
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: cb9cabbd67f77fa6369ede21fbf0d5296959a671
+PODFILE CHECKSUM: f4479d058cfc21598921b7e73773036567037ed9
 
 COCOAPODS: 1.6.1

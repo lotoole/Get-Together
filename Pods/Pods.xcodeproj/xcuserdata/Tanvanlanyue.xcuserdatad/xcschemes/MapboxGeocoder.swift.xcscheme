@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2718FEE15688D86A270E142EA58F938"
-               BuildableName = "Pods_Get_Together.framework"
-               BlueprintName = "Pods-Get Together"
+               BlueprintIdentifier = "2AC68B40E7B7F05FB2152F1348781C34"
+               BuildableName = "MapboxGeocoder.framework"
+               BlueprintName = "MapboxGeocoder.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2718FEE15688D86A270E142EA58F938"
-            BuildableName = "Pods_Get_Together.framework"
-            BlueprintName = "Pods-Get Together"
+            BlueprintIdentifier = "2AC68B40E7B7F05FB2152F1348781C34"
+            BuildableName = "MapboxGeocoder.framework"
+            BlueprintName = "MapboxGeocoder.swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
