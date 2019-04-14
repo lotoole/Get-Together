@@ -41,6 +41,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
     }
     
+    //get user location once the map is fully loaded
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         mapView.setCenter((mapView.userLocation?.coordinate)!, animated: false)
         location = mapView.userLocation?.coordinate
