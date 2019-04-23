@@ -42,8 +42,11 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     //get user location once the map is fully loaded
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-        //mapView.setCenter((mapView.userLocation?.coordinate)!, animated: false)
+        /* TO DO: This is where location is
+         */
         location = mapView.userLocation?.coordinate
+        print("Liam... User Location coordinate: ", location)
+        mapView.setCenter((mapView.userLocation?.coordinate)!, animated: true)
     }
     
     //call the add event function when button clicked
