@@ -1,1 +1,6 @@
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+Get \Together.xcodeproj/project.xcworkspace/xcuserdata/*
+
 
