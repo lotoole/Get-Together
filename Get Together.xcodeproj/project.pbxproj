@@ -63,7 +63,7 @@
 		29501CB4225AF8D2002D1F16 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		29501CB6225AF997002D1F16 /* inst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inst.png; sourceTree = "<group>"; };
 		29501CB7225AF997002D1F16 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
-		299062D62263C5C2000F4D32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		299062D62263C5C2000F4D32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "/Users/Tanvanlanyue/Desktop/Get-Together/Get Together/../../../Downloads/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		299875F7225AECA100588DAA /* Login screen2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login screen2x.png"; sourceTree = "<group>"; };
 		2C137480CEFEAFD80F36FF0F /* Pods-Get TogetherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3B8DDCDA97F6763A32E5F153 /* Pods_Get_Together.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Together.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +393,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Get Together/Pods-Get Together-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MapboxGeocoder.swift/MapboxGeocoder.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -401,6 +402,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxGeocoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
