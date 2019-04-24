@@ -46,8 +46,8 @@ class ViewController: UIViewController {
             // ...
             
         }
-        print(self!.Email.text!)
-        print(self!.Password.text!)
+        print(Email.text)
+        print(Password.text)
 
     }
     
