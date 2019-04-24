@@ -36,16 +36,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func click(_ sender: UIButton) {
+        print("hello")
         var email = "tao@gmail.com"
-        var pass = "tao123"
+        var pass = "tao12"
         
-        Auth.auth().signIn(withEmail: email, password: pass) { [weak self] user, error in
-            print(user!)
-            guard let strongSelf = self else { return }
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
+            
+            //print("USER \(result!.user.email)")
+            
+            //print(result!.user)
             
             // ...
+            if let error = error{
+                print("error",error.localizedDescription)
+                // Alert user
+            }
             
+            // Segway
         }
+        
         print(Email.text)
         print(Password.text)
 
