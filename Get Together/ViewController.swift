@@ -28,11 +28,18 @@ class ViewController: UIViewController {
     }
   
 
-
+    @IBAction func backToSignUp(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "SignInToSignUp", sender: nil)
+    }
+    
     
     @IBAction func password(_ sender: Any) {
       
 
+    }
+    
+    @IBAction func SignUp(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
     }
     
     @IBAction func click(_ sender: UIButton) {
