@@ -36,34 +36,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func click(_ sender: UIButton) {
-        //print("hello")
-        //var email = "tao@gmail.com"
-        //var pass = "tao123"
-        print(Email.text)
-        print(Password.text)
+        //try catch
+        LogIn(email: self.Email.text!,password: self.Password.text!)
+        // Login successful, navigate
         
-        Auth.auth().signIn(withEmail: Email.text!, password: Password.text!) { (result, error) in
+          self.performSegue(withIdentifier: "logInSegue", sender: nil)
             
-            //print("USER \(result!.user.email)")
-            
-            //print(result!.user)
-            
-            // ...
-            if let error = error{
-                print("error",error.localizedDescription)
-                // Alert user
-            }
-            
-            // Segway
-            else {
-                self.performSegue(withIdentifier: "logInSegue", sender: nil)
-            }
-            
-        }
-        
-       
-
     }
-    
-}
 
+}

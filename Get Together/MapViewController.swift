@@ -7,10 +7,12 @@
 //
 import UIKit
 import Mapbox
+import Firebase
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
     
     var location: CLLocationCoordinate2D!
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         //mapView.setCenter((mapView.userLocation?.coordinate)!, animated: false)
         location = mapView.userLocation?.coordinate
+        ref = Database.database().reference()
+        
+        print(location)
     }
     
     //call the add event function when button clicked
