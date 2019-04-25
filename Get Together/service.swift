@@ -11,7 +11,7 @@ import Firebase
 
 func LogIn(email: String, password: String) -> Void{
     Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-        print("hello ",result!.user.email)
+       // print("hello ",result!.user.email)
         // If user doesnt exist
         if let error = error{
             print("error",error.localizedDescription)
