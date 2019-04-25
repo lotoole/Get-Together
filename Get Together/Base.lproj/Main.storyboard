@@ -90,7 +90,7 @@
                     <connections>
                         <outlet property="Email" destination="irh-Os-1Km" id="Qxk-Z2-fWV"/>
                         <outlet property="Password" destination="otW-Qg-ofR" id="DWF-F7-2Px"/>
-                        <segue destination="Ez8-wl-4ls" kind="show" id="d32-li-s5P"/>
+                        <segue destination="Ez8-wl-4ls" kind="show" identifier="logInSegue" id="d32-li-s5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

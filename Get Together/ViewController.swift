@@ -36,11 +36,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func click(_ sender: UIButton) {
-        print("hello")
-        var email = "tao@gmail.com"
-        var pass = "tao12"
+        //print("hello")
+        //var email = "tao@gmail.com"
+        //var pass = "tao123"
+        print(Email.text)
+        print(Password.text)
         
-        Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
+        Auth.auth().signIn(withEmail: Email.text!, password: Password.text!) { (result, error) in
             
             //print("USER \(result!.user.email)")
             
@@ -53,10 +55,13 @@ class ViewController: UIViewController {
             }
             
             // Segway
+            else {
+                self.performSegue(withIdentifier: "logInSegue", sender: nil)
+            }
+            
         }
         
-        print(Email.text)
-        print(Password.text)
+       
 
     }
     
