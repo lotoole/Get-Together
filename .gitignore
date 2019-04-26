@@ -2,6 +2,7 @@
 project.xcworkspace/
 xcuserdata/
 .DS_Store
+GoogleService-info.plist
 Get \Together.xcodeproj/project.xcworkspace/xcuserdata/*
 
 
