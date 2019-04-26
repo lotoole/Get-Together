@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291D607622728DB4005A1DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291D607522728DB4005A1DB3 /* Main.storyboard */; };
+		293F361C227279C8009F675F /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F361B227279C8009F675F /* close.png */; };
+		293F362422727D51009F675F /* google2.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362322727D51009F675F /* google2.png */; };
+		293F362622727FDE009F675F /* createEvent.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362522727FDE009F675F /* createEvent.png */; };
 		29501CB5225AF8D2002D1F16 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 29501CB4225AF8D2002D1F16 /* facebook.png */; };
 		29501CB8225AF998002D1F16 /* inst.png in Resources */ = {isa = PBXBuildFile; fileRef = 29501CB6225AF997002D1F16 /* inst.png */; };
-		29501CB9225AF998002D1F16 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 29501CB7225AF997002D1F16 /* google.png */; };
-		299875F8225AECA100588DAA /* Login screen2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299875F7225AECA100588DAA /* Login screen2x.png */; };
+		29E962562271EB860016D99D /* starbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 29E962552271EB860016D99D /* starbucks.jpg */; };
+		29E9625A2271EFDF0016D99D /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E962592271EFDF0016D99D /* Login.png */; };
 		3BD35F210AE2CB34899CB1D0 /* Pods_Get_Together.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9F2A55CBEB5BAA98178DED /* Pods_Get_Together.framework */; };
 		600E0B842270C05C00C41748 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600E0B832270C05C00C41748 /* GoogleService-Info.plist */; };
 		76D59F842081C79D88D1066F /* Pods_Get_TogetherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780E465B0500BAB910AA1C92 /* Pods_Get_TogetherUITests.framework */; };
@@ -18,7 +22,6 @@
 		ECA21459225F896B0004B6AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA21458225F896B0004B6AD /* MapViewController.swift */; };
 		ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1622482123003F2AEF /* AppDelegate.swift */; };
 		ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1822482123003F2AEF /* ViewController.swift */; };
-		ECBF6D1C22482123003F2AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBF6D1A22482123003F2AEF /* Main.storyboard */; };
 		ECBF6D1E22482124003F2AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBF6D1D22482124003F2AEF /* Assets.xcassets */; };
 		ECBF6D2122482124003F2AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBF6D1F22482124003F2AEF /* LaunchScreen.storyboard */; };
 		ECBF6D2C22482124003F2AEF /* Get_TogetherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D2B22482124003F2AEF /* Get_TogetherTests.swift */; };
@@ -59,25 +62,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		057F40283D3425765E456BFE /* Pods-Get TogetherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.release.xcconfig"; sourceTree = "<group>"; };
+		0C0B7DCB7C86B8F9C7C17FB7 /* Pods-Get TogetherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		291D607522728DB4005A1DB3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		293F361B227279C8009F675F /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		293F362322727D51009F675F /* google2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google2.png; sourceTree = "<group>"; };
+		293F362522727FDE009F675F /* createEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createEvent.png; sourceTree = "<group>"; };
 		29501CB4225AF8D2002D1F16 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		29501CB6225AF997002D1F16 /* inst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inst.png; sourceTree = "<group>"; };
-		29501CB7225AF997002D1F16 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
-		299875F7225AECA100588DAA /* Login screen2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login screen2x.png"; sourceTree = "<group>"; };
-		3DEF0F4975CA354D292562D4 /* Pods-Get TogetherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.release.xcconfig"; sourceTree = "<group>"; };
+		29E962552271EB860016D99D /* starbucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks.jpg; sourceTree = "<group>"; };
+		29E962592271EFDF0016D99D /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
 		4B9F2A55CBEB5BAA98178DED /* Pods_Get_Together.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Together.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5677FDE068D2755DF53E7A94 /* Pods-Get Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.release.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.release.xcconfig"; sourceTree = "<group>"; };
 		600E0B832270C05C00C41748 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E728BF0E2E5E75A3779826C /* Pods-Get Together.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.debug.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.debug.xcconfig"; sourceTree = "<group>"; };
 		780E465B0500BAB910AA1C92 /* Pods_Get_TogetherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_TogetherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		937C27F516586181E622CB8E /* Pods-Get Together.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.debug.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.debug.xcconfig"; sourceTree = "<group>"; };
-		963E813F8FD1B3F0F01EEB5B /* Pods-Get TogetherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.debug.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9F9F57DE071C26218300639A /* Pods-Get TogetherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9138DF2344DAF3C8D7415AFA /* Pods-Get TogetherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.debug.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_TogetherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5D1B199D32BF0D7F4D86E96 /* Pods-Get TogetherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.debug.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.release.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.release.xcconfig"; sourceTree = "<group>"; };
 		ECA21458225F896B0004B6AD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECBF6D1322482123003F2AEF /* Get Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF6D1622482123003F2AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBF6D1822482123003F2AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECBF6D1B22482123003F2AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECBF6D1D22482124003F2AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBF6D2022482124003F2AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECBF6D2222482124003F2AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 		ECBF6D3622482124003F2AEF /* Get_TogetherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_TogetherUITests.swift; sourceTree = "<group>"; };
 		ECBF6D3822482124003F2AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECEA089A224A71AC00FEDEFC /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		F2F23F2513FDCBFA404068AA /* Pods-Get TogetherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.debug.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,15 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75CB19A88BD40FC48F4D867D /* Pods */ = {
+		63B4BC17C166D885A5A62390 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				937C27F516586181E622CB8E /* Pods-Get Together.debug.xcconfig */,
-				5677FDE068D2755DF53E7A94 /* Pods-Get Together.release.xcconfig */,
-				A5D1B199D32BF0D7F4D86E96 /* Pods-Get TogetherTests.debug.xcconfig */,
-				3DEF0F4975CA354D292562D4 /* Pods-Get TogetherTests.release.xcconfig */,
-				963E813F8FD1B3F0F01EEB5B /* Pods-Get TogetherUITests.debug.xcconfig */,
-				9F9F57DE071C26218300639A /* Pods-Get TogetherUITests.release.xcconfig */,
+				6E728BF0E2E5E75A3779826C /* Pods-Get Together.debug.xcconfig */,
+				BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */,
+				F2F23F2513FDCBFA404068AA /* Pods-Get TogetherTests.debug.xcconfig */,
+				057F40283D3425765E456BFE /* Pods-Get TogetherTests.release.xcconfig */,
+				9138DF2344DAF3C8D7415AFA /* Pods-Get TogetherUITests.debug.xcconfig */,
+				0C0B7DCB7C86B8F9C7C17FB7 /* Pods-Get TogetherUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -150,8 +156,8 @@
 				ECBF6D2A22482124003F2AEF /* Get TogetherTests */,
 				ECBF6D3522482124003F2AEF /* Get TogetherUITests */,
 				ECBF6D1422482123003F2AEF /* Products */,
-				75CB19A88BD40FC48F4D867D /* Pods */,
 				C768431EC5E1C6FBE1A4C26B /* Frameworks */,
+				63B4BC17C166D885A5A62390 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,15 +177,18 @@
 				600E0B832270C05C00C41748 /* GoogleService-Info.plist */,
 				ECBF6D1622482123003F2AEF /* AppDelegate.swift */,
 				29501CB4225AF8D2002D1F16 /* facebook.png */,
-				299875F7225AECA100588DAA /* Login screen2x.png */,
-				29501CB7225AF997002D1F16 /* google.png */,
+				29E962552271EB860016D99D /* starbucks.jpg */,
+				293F361B227279C8009F675F /* close.png */,
+				293F362522727FDE009F675F /* createEvent.png */,
+				29E962592271EFDF0016D99D /* Login.png */,
 				29501CB6225AF997002D1F16 /* inst.png */,
+				293F362322727D51009F675F /* google2.png */,
 				ECBF6D1822482123003F2AEF /* ViewController.swift */,
-				ECBF6D1A22482123003F2AEF /* Main.storyboard */,
 				ECBF6D1D22482124003F2AEF /* Assets.xcassets */,
 				ECBF6D1F22482124003F2AEF /* LaunchScreen.storyboard */,
 				ECBF6D2222482124003F2AEF /* Info.plist */,
 				ECA21458225F896B0004B6AD /* MapViewController.swift */,
+				291D607522728DB4005A1DB3 /* Main.storyboard */,
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -313,13 +322,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299875F8225AECA100588DAA /* Login screen2x.png in Resources */,
 				600E0B842270C05C00C41748 /* GoogleService-Info.plist in Resources */,
+				293F362622727FDE009F675F /* createEvent.png in Resources */,
 				ECBF6D2122482124003F2AEF /* LaunchScreen.storyboard in Resources */,
+				29E9625A2271EFDF0016D99D /* Login.png in Resources */,
+				293F362422727D51009F675F /* google2.png in Resources */,
+				291D607622728DB4005A1DB3 /* Main.storyboard in Resources */,
 				29501CB5225AF8D2002D1F16 /* facebook.png in Resources */,
+				29E962562271EB860016D99D /* starbucks.jpg in Resources */,
+				293F361C227279C8009F675F /* close.png in Resources */,
 				ECBF6D1E22482124003F2AEF /* Assets.xcassets in Resources */,
-				ECBF6D1C22482123003F2AEF /* Main.storyboard in Resources */,
-				29501CB9225AF998002D1F16 /* google.png in Resources */,
 				29501CB8225AF998002D1F16 /* inst.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,14 +571,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ECBF6D1A22482123003F2AEF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECBF6D1B22482123003F2AEF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECBF6D1F22482124003F2AEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -696,7 +700,7 @@
 		};
 		ECBF6D3C22482124003F2AEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 937C27F516586181E622CB8E /* Pods-Get Together.debug.xcconfig */;
+			baseConfigurationReference = 6E728BF0E2E5E75A3779826C /* Pods-Get Together.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -718,7 +722,7 @@
 		};
 		ECBF6D3D22482124003F2AEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5677FDE068D2755DF53E7A94 /* Pods-Get Together.release.xcconfig */;
+			baseConfigurationReference = BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,7 +744,7 @@
 		};
 		ECBF6D3F22482124003F2AEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5D1B199D32BF0D7F4D86E96 /* Pods-Get TogetherTests.debug.xcconfig */;
+			baseConfigurationReference = F2F23F2513FDCBFA404068AA /* Pods-Get TogetherTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -761,7 +765,7 @@
 		};
 		ECBF6D4022482124003F2AEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DEF0F4975CA354D292562D4 /* Pods-Get TogetherTests.release.xcconfig */;
+			baseConfigurationReference = 057F40283D3425765E456BFE /* Pods-Get TogetherTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -782,7 +786,7 @@
 		};
 		ECBF6D4222482124003F2AEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 963E813F8FD1B3F0F01EEB5B /* Pods-Get TogetherUITests.debug.xcconfig */;
+			baseConfigurationReference = 9138DF2344DAF3C8D7415AFA /* Pods-Get TogetherUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -802,7 +806,7 @@
 		};
 		ECBF6D4322482124003F2AEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F9F57DE071C26218300639A /* Pods-Get TogetherUITests.release.xcconfig */;
+			baseConfigurationReference = 0C0B7DCB7C86B8F9C7C17FB7 /* Pods-Get TogetherUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
