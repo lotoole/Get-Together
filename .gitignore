@@ -1,6 +1,7 @@
 *.xcuserstate
 project.xcworkspace/
 xcuserdata/
+.DS_Store
 Get \Together.xcodeproj/project.xcworkspace/xcuserdata/*
 
 
