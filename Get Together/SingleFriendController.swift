@@ -11,7 +11,9 @@ import UIKit
 class SingleFriendController: UIViewController {
     
     override func viewDidLoad() {
-        print("Liams single friend loaded")
+        //update the values of the friends information here
+        
     }
+    
     
 }

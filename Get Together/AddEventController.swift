@@ -71,6 +71,7 @@ class AddEventController: UIViewController {
                 self.eventTime += self.TimeOutlet.text!
                 self.eventDescription += self.DescriptionOutlet.text!
                 self.eventCoordinate = placemark.location?.coordinate
+                //POST data to an event the user has
             }
     }
     

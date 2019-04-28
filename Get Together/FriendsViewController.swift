@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//TO DO: Make this array be information coming from the database, and populate the stack using it
 //this array will be of settings objects from the database
 var friendsArray = ["Anonomous", "Tesing"]
 var friendsIndex = 0
