@@ -71,7 +71,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let aec = segue.destination as? AddEventController {
-            aec.coordinate = coordinatesNewEvent
+            aec.eventCoordinate = coordinatesNewEvent
         }
     }
     

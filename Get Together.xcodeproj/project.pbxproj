@@ -20,6 +20,10 @@
 		9A9475E6789B93CC3920B075 /* Pods_Get_TogetherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */; };
 		EC0D10542270FE2900E34C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */; };
 		EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1055227101AC00E34C9D /* AddEventController.swift */; };
+		EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */; };
+		EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882654227625B700EA0B38 /* SingleSettingController.swift */; };
+		EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882656227627D200EA0B38 /* SingleFriendController.swift */; };
+		EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8826582276283700EA0B38 /* FriendsViewController.swift */; };
 		ECA21459225F896B0004B6AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA21458225F896B0004B6AD /* MapViewController.swift */; };
 		ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1622482123003F2AEF /* AppDelegate.swift */; };
 		ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1822482123003F2AEF /* ViewController.swift */; };
@@ -81,6 +85,10 @@
 		BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.release.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.release.xcconfig"; sourceTree = "<group>"; };
 		EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC0D1055227101AC00E34C9D /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewConroller2.swift; sourceTree = "<group>"; };
+		EC882654227625B700EA0B38 /* SingleSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSettingController.swift; sourceTree = "<group>"; };
+		EC882656227627D200EA0B38 /* SingleFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFriendController.swift; sourceTree = "<group>"; };
+		EC8826582276283700EA0B38 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		ECA21458225F896B0004B6AD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECBF6D1322482123003F2AEF /* Get Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF6D1622482123003F2AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,13 +193,17 @@
 				29E962592271EFDF0016D99D /* Login.png */,
 				29501CB6225AF997002D1F16 /* inst.png */,
 				293F362322727D51009F675F /* google2.png */,
-				ECBF6D1822482123003F2AEF /* ViewController.swift */,
 				ECBF6D1D22482124003F2AEF /* Assets.xcassets */,
 				ECBF6D1F22482124003F2AEF /* LaunchScreen.storyboard */,
 				ECBF6D2222482124003F2AEF /* Info.plist */,
+				ECBF6D1822482123003F2AEF /* ViewController.swift */,
 				ECA21458225F896B0004B6AD /* MapViewController.swift */,
 				291D607522728DB4005A1DB3 /* Main.storyboard */,
+				EC882654227625B700EA0B38 /* SingleSettingController.swift */,
+				EC882656227627D200EA0B38 /* SingleFriendController.swift */,
 				EC0D1055227101AC00E34C9D /* AddEventController.swift */,
+				EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */,
+				EC8826582276283700EA0B38 /* FriendsViewController.swift */,
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -537,10 +549,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */,
+				EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */,
 				ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */,
+				EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */,
 				ECA21459225F896B0004B6AD /* MapViewController.swift in Sources */,
 				EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */,
 				ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */,
+				EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
