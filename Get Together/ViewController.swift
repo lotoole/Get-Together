@@ -39,8 +39,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SignUp(_ sender: UIButton) {
+        print("CLICKED SIGN UP")
         self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
     }
+    
+    @IBAction func SubmitSignUp(_ sender: Any) {
+        print("clicked Submit sign up")
+        createAccount(email: self.Email.text!,password: self.Password.text!)
+        self.performSegue(withIdentifier: "logInSegue", sender: nil)
+        }
     
     @IBAction func click(_ sender: UIButton) {
         //try catch
