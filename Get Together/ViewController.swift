@@ -26,12 +26,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func RegisterUser(_ sender: UIButton) {
-        print(EmailSignUp.isEmpty)
-        if(!(EmailSignUp.isEmpty && PasswordSignUp.isEmpty)) {
+        print(EmailSignUp.text!.isEmpty)
+        if(!(EmailSignUp.text!.isEmpty && PasswordSignUp.text!.isEmpty)) {
             return
         }
         
-        auth.auth().createUser(withEmail: EmailSignUp, password: PasswordSignUp) {
+        Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
             authResult, error in
             
             if let error = error {
