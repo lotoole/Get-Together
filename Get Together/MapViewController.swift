@@ -14,18 +14,15 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var location: CLLocationCoordinate2D!
     var mapConstraints: MGLCoordinateBounds!
     var coordinatesNewEvent:CLLocationCoordinate2D!
-    var fakeEvents : Array<Event> = []
+    var eventList : Array<Event> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         generateMapView()
         addCreateEventButton()
         getAllEvents()
-        addFakeEvents()
-        for item in self.fakeEvents{
-            print("Fake items ",item)
-        }
-        renderMapEvents(events : self.fakeEvents)
-    
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        renderMapEvents(events : self.eventList)
     }
     func getAllEvents(){
         print("Getting all events")
@@ -44,8 +41,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 let latitude: Double = event.value(forKey:"latitude")! as! Double
                 let address: String = event.value(forKey:"address")! as! String
                 let createdBy: String = event.value(forKey:"createdBy")! as! String
-//                print(x)
-                print(latitude)
+
                 var eventDTO = Event(
                  id: "12knd2",
                  title: title,
@@ -54,8 +50,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                  address: address,
                  createdBy: createdBy
                 )
-                print("Event working",eventDTO.latitude)
-                 self.fakeEvents.append(eventDTO)
+                 self.eventList.append(eventDTO)
+                
             }
             }){
             (error) in
@@ -86,21 +82,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Enable the permanent heading indicator, which will appear when the tracking mode is not `.followWithHeading`.
         mapView.showsUserHeadingIndicator = true
         mapView.showsUserLocation = true
-    }
-    //TODO: REMOVE THIS ONCE WE CAN POPULATE FROM DB
-    func addFakeEvents() -> Void{
-        //fake event 1
-        var fakeEvent1 = Event(id: "12knd2", title: "Funeral for my GPA", longitude:  -73.198474, latitude: 44.480138, address: "Perkins Hall, Burlington, VT 05405", createdBy: "Cam")
-        //fake event 2
-         var fakeEvent2 = Event(id: "1h5hj2", title: "Press F to pay respects",longitude:  -73.198389, latitude: 44.480878, address: "8 Mansfield Ave, Burlington, VT 05401", createdBy: "Cam")
-        //fake event 3
-         var fakeEvent3 = Event(id: "5h2jh5", title: "Tao's Dinner", longitude: -73.199692, latitude: 44.480197, address: "University Pl, Burlington, VT 05405", createdBy: "Cam")
-        
-        self.fakeEvents.append(fakeEvent1)
-        self.fakeEvents.append(fakeEvent2)
-        self.fakeEvents.append(fakeEvent3)
-
-//        return fakeEvents
     }
     
     func renderMapEvents(events: Array<Event>){
