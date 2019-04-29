@@ -25,6 +25,7 @@
 		EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882654227625B700EA0B38 /* SingleSettingController.swift */; };
 		EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882656227627D200EA0B38 /* SingleFriendController.swift */; };
 		EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8826582276283700EA0B38 /* FriendsViewController.swift */; };
+		EC9CA8E922778F0D004BBEEA /* SingleEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CA8E822778F0D004BBEEA /* SingleEventController.swift */; };
 		ECA21459225F896B0004B6AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA21458225F896B0004B6AD /* MapViewController.swift */; };
 		ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1622482123003F2AEF /* AppDelegate.swift */; };
 		ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF6D1822482123003F2AEF /* ViewController.swift */; };
@@ -91,6 +92,7 @@
 		EC882654227625B700EA0B38 /* SingleSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSettingController.swift; sourceTree = "<group>"; };
 		EC882656227627D200EA0B38 /* SingleFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFriendController.swift; sourceTree = "<group>"; };
 		EC8826582276283700EA0B38 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		EC9CA8E822778F0D004BBEEA /* SingleEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventController.swift; sourceTree = "<group>"; };
 		ECA21458225F896B0004B6AD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECBF6D1322482123003F2AEF /* Get Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF6D1622482123003F2AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */,
 				EC8826582276283700EA0B38 /* FriendsViewController.swift */,
 				E446C5212277507700702B21 /* Event.swift */,
+				EC9CA8E822778F0D004BBEEA /* SingleEventController.swift */,
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 			files = (
 				EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */,
 				E446C5222277507700702B21 /* Event.swift in Sources */,
+				EC9CA8E922778F0D004BBEEA /* SingleEventController.swift in Sources */,
 				EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */,
 				ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */,
 				EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */,
