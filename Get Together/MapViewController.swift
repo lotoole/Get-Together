@@ -17,7 +17,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateMapView()
-        addGesturesToMap()
         addCreateEventButton()
         renderMapEvents(events : addFakeEvents())
     
@@ -73,22 +72,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
     }
     
-    
-    func addGesturesToMap(){
-        // Gesture for add event on long press
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
-        mapView.addGestureRecognizer(longPress)
-    }
-    
-    @objc func didLongPress(_ sender: UILongPressGestureRecognizer) {
-        guard sender.state == .began else { return }
-        // Converts point where user did a long press to map coordinates
-        let point = sender.location(in: mapView)
-        coordinatesNewEvent = mapView.convert(point, toCoordinateFrom: mapView)
-        
-        //AddEvent Segue
-        self.performSegue(withIdentifier: "AddEventSegue", sender: self)
-    }
+   
     
     //call the add event function when button clicked
     @objc func buttonAction(_ sender: UIButton!) {
