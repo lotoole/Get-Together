@@ -26,23 +26,27 @@ class ViewController: UIViewController {
     
     
     @IBAction func RegisterUser(_ sender: UIButton) {
+        print("REGISTER")
+        print(self.EmailSignUp.text!)
+        print(self.PasswordSignUp.text!)
         print(EmailSignUp.text!.isEmpty)
-        if(!(EmailSignUp.text!.isEmpty && PasswordSignUp.text!.isEmpty)) {
+        if(EmailSignUp.text!.isEmpty || PasswordSignUp.text!.isEmpty) {
+            print("what is this")
             return
         }
-        
+
         Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
             authResult, error in
-            
+
             if let error = error {
                 print("error",error.localizedDescription)
                 return
             } else {
                 print("This is good")
-                
+
             }
         }
-        
+
     }
     
     @IBAction func BackToSignIn(_ sender: UIButton) {
