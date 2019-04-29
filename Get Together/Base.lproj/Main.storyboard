@@ -273,7 +273,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SubmitSignUp:" destination="awn-8c-INS" eventType="touchUpInside" id="aOH-kq-RQS"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="MLx-6z-k7X"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logInSegue" id="MLx-6z-k7X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDc-IL-MPV">
@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5a-sl-mhL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-571"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="-571.20535714285711"/>
         </scene>
     </scenes>
     <resources>
@@ -309,6 +309,6 @@
         <image name="inst.png" width="354" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MxV-fq-VfP"/>
+        <segue reference="MLx-6z-k7X"/>
     </inferredMetricsTieBreakers>
 </document>
