@@ -9,6 +9,7 @@
 import UIKit
 
 class SingleEventController: UIViewController {
+    var eventId: String!
     @IBOutlet weak var TitleOutlet: UITextField!
     @IBOutlet weak var TimeOutlet: UITextField!
     @IBOutlet weak var AddressOutlet: UITextField!
@@ -17,8 +18,7 @@ class SingleEventController: UIViewController {
     
     override func viewDidLoad() {
         
-        
-        
+        print("Liams", eventId)
     }
     
 }

@@ -15,6 +15,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var mapConstraints: MGLCoordinateBounds!
     var coordinatesNewEvent:CLLocationCoordinate2D!
     var eventList : Array<Event> = []
+    var eventId: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         generateMapView()
@@ -93,7 +94,12 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
     }
     
-   
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        //change this to annotation.subtitle once we start querying events by id instead of title
+        eventId = annotation.title as? String
+        self.performSegue(withIdentifier: "SingleEventTransfer", sender: self)
+        return false
+    }
     
     //call the add event function when button clicked
     @objc func buttonAction(_ sender: UIButton!) {
@@ -101,8 +107,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let aec = segue.destination as? AddEventController {
-            aec.eventCoordinate = coordinatesNewEvent
+        if let sec = segue.destination as? SingleEventController {
+            sec.eventId = eventId
         }
     }
     
