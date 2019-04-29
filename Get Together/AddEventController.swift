@@ -8,6 +8,7 @@
 
 import UIKit
 import MapboxGeocoder
+import Firebase
 class AddEventController: UIViewController {
     
     let geocoder = Geocoder(accessToken: "pk.eyJ1IjoiZ2V0dG9nZXRoZXIiLCJhIjoiY2p0ZWpydWwxMWl1ajN6b2FhYnJmcGV3aSJ9.sYvTy3su2cTOvT94kax_qQ")
@@ -31,6 +32,8 @@ class AddEventController: UIViewController {
     
     //submit button, should add event to database if it passes
     @IBAction func submitAddEvent(_ sender: Any) {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
             //forward geocode the users input to get cordinates to submit
             let userAddressInput = ForwardGeocodeOptions(query: AddressOutlet.text!)
             //refine the search
@@ -51,6 +54,18 @@ class AddEventController: UIViewController {
                 self.eventDescription += self.DescriptionOutlet.text!
                 self.eventCoordinate = placemark.location?.coordinate
                 //POST data to an event the user has
+
+                //Missing ID and CreatedBY
+                ref.child("Events")
+                    .child(self.eventTitle)
+                    .setValue([
+                        "title":self.eventTitle,
+                        "longitude":self.eventCoordinate.longitude,
+                        "latitude":self.eventCoordinate.latitude,
+                        "address":self.eventAddress,
+                        "description":self.eventDescription,
+                        "createdBy":"UPDATE"
+                        ])
             }
     }
     
