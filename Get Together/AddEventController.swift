@@ -25,27 +25,6 @@ class AddEventController: UIViewController {
     
    
     override func viewDidLoad() {
-        //if the user pressed on the map
-        if((eventCoordinate) != nil){
-            //use forward geocoding to display address and add to our variable
-            let options = ReverseGeocodeOptions(coordinate: eventCoordinate)
-            let task = geocoder.geocode(options) { (placemarks, attribution, error) in
-                guard let placemark = placemarks?.first else {
-                    return
-                }
-                print("Beg of list I want")
-                print(placemark.imageName ?? "")
-                // telephone
-                print(placemark.genres?.joined(separator: ", ") ?? "")
-                // computer, electronic
-                print(placemark.administrativeRegion?.name ?? "")
-                // New York
-                print(placemark.administrativeRegion?.code ?? "")
-                // US-NY
-                print(placemark.place?.wikidataItemIdentifier ?? "")
-            }
-            print("Liam Tap down. Coordinates : " , eventCoordinate)
-        }
         
         super.viewDidLoad()
         }
