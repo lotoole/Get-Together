@@ -19,6 +19,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         generateMapView()
         addGesturesToMap()
         addCreateEventButton()
+        renderMapEvents(events : addFakeEvents())
+    
     }
     func addCreateEventButton(){
         //add button for adding events
@@ -44,10 +46,34 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Enable the permanent heading indicator, which will appear when the tracking mode is not `.followWithHeading`.
         mapView.showsUserHeadingIndicator = true
         mapView.showsUserLocation = true
-        
-        
-    
     }
+    //TODO: REMOVE THIS ONCE WE CAN POPULATE FROM DB
+    func addFakeEvents() -> Array<Event>{
+        var fakeEvents : Array<Event> = []
+        //fake event 1
+        var fakeEvent1 = Event(id: "12knd2", title: "Funeral for my GPA", longitude:  -73.198474, latitude: 44.480138, address: "Perkins Hall, Burlington, VT 05405", createdBy: "Cam")
+        //fake event 2
+         var fakeEvent2 = Event(id: "1h5hj2", title: "Press F to pay respects",longitude:  -73.198389, latitude: 44.480878, address: "8 Mansfield Ave, Burlington, VT 05401", createdBy: "Cam")
+        //fake event 3
+         var fakeEvent3 = Event(id: "5h2jh5", title: "Tao's Dinner", longitude: -73.199692, latitude: 44.480197, address: "University Pl, Burlington, VT 05405", createdBy: "Cam")
+        
+        fakeEvents.append(fakeEvent1)
+        fakeEvents.append(fakeEvent2)
+        fakeEvents.append(fakeEvent3)
+
+        return fakeEvents
+    }
+    
+    func renderMapEvents(events: Array<Event>){
+        for event in events{
+            let eventAnnotation=MGLPointAnnotation()
+            eventAnnotation.coordinate=CLLocationCoordinate2D(latitude: event.latitude, longitude: event.longitude)
+            eventAnnotation.title=event.title
+            mapView.addAnnotation(eventAnnotation)
+        }
+    }
+    
+    
     func addGesturesToMap(){
         // Gesture for add event on long press
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))

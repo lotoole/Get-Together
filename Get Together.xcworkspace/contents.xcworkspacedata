@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UVM.gpx">
+   </FileRef>
+   <FileRef
       location = "group:Get Together.xcodeproj">
    </FileRef>
    <FileRef

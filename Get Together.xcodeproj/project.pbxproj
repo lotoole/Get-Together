@@ -18,6 +18,7 @@
 		3BD35F210AE2CB34899CB1D0 /* Pods_Get_Together.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9F2A55CBEB5BAA98178DED /* Pods_Get_Together.framework */; };
 		76D59F842081C79D88D1066F /* Pods_Get_TogetherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780E465B0500BAB910AA1C92 /* Pods_Get_TogetherUITests.framework */; };
 		9A9475E6789B93CC3920B075 /* Pods_Get_TogetherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */; };
+		E446C5222277507700702B21 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446C5212277507700702B21 /* Event.swift */; };
 		EC0D10542270FE2900E34C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */; };
 		EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1055227101AC00E34C9D /* AddEventController.swift */; };
 		EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */; };
@@ -83,6 +84,7 @@
 		9138DF2344DAF3C8D7415AFA /* Pods-Get TogetherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.debug.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_TogetherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.release.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.release.xcconfig"; sourceTree = "<group>"; };
+		E446C5212277507700702B21 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC0D1055227101AC00E34C9D /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 		EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewConroller2.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				EC0D1055227101AC00E34C9D /* AddEventController.swift */,
 				EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */,
 				EC8826582276283700EA0B38 /* FriendsViewController.swift */,
+				E446C5212277507700702B21 /* Event.swift */,
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */,
+				E446C5222277507700702B21 /* Event.swift in Sources */,
 				EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */,
 				ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */,
 				EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */,
