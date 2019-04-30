@@ -48,4 +48,17 @@ class SingleEventController: UIViewController {
         AddressOutlet.text = event.address
     }
     
+    @IBAction func joinEvent(_ sender: UIButton) {
+        print("JOINED")
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid as! String
+        print("USER ID HERE!",userID)
+        print("PRINT", eventId!)
+        ref.child("EventAttendence")
+            .child(eventId!)
+            .child(userID)
+            .setValue(userID)
+    
+    }
 }
