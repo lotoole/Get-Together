@@ -17,13 +17,20 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var eventList : Array<Event> = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DID LOAD")
         generateMapView()
         addCreateEventButton()
         getAllEvents()
+
+
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool){
+//        super.viewWillAppear(animated)
+        print("DID APPEAR")
+
         renderMapEvents(events : self.eventList)
     }
+
     func getAllEvents(){
         print("Getting all events")
         var ref: DatabaseReference!
@@ -32,26 +39,35 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         print("USER ID HERE!",userID)
         ref.child("Events").observeSingleEvent(of: .value, with:{
             (snapshot) in
+            
+            print("Snap Children",snapshot.hasChildren())
             let valueDict = snapshot.value as? NSDictionary
-
-            for(key, val) in valueDict! {
+            
+            //NSUInteger count = [valueDict! count]
+            
+            if(snapshot.hasChildren()){
+                
+            
+            for(key, _) in valueDict! {
                 let event: NSObject = valueDict![key] as! NSObject
                 let title: String = event.value(forKey:"title")! as! String
                 let longitude: Double = event.value(forKey:"longitude")! as! Double
                 let latitude: Double = event.value(forKey:"latitude")! as! Double
                 let address: String = event.value(forKey:"address")! as! String
                 let createdBy: String = event.value(forKey:"createdBy")! as! String
-
-                var eventDTO = Event(
+                let time: String = event.value(forKey:"time")! as! String
+                let eventDTO = Event(
                  id: "12knd2",
                  title: title,
                  longitude:  longitude,
                  latitude: latitude,
                  address: address,
-                 createdBy: createdBy
+                 createdBy: createdBy,
+                 time: time
                 )
                  self.eventList.append(eventDTO)
                 
+            }
             }
             }){
             (error) in
