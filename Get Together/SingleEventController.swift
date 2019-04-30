@@ -12,12 +12,30 @@ class SingleEventController: UIViewController {
     var eventId: String!
     var currentEvent: Event!
     var eventUsersList: Array<String> = []
+    var isAttending = false
    
     @IBOutlet weak var TitleOutlet: UILabel!
     @IBOutlet weak var AddressOutlet: UILabel!
     @IBOutlet weak var DescriptionOutlet: UILabel!
     @IBOutlet weak var TimeOutlet: UILabel!
     @IBOutlet weak var HostedByOutlet: UITextView!
+    @IBOutlet weak var JoinButton: UIButton!
+    
+    @IBAction func JoinButtonPressed(_ sender: Any) {
+        print("Join Button Pressed")
+        //When the button is pressed check if they clicked it when it said join or unjoin by checking if they are attending
+        
+        //If the user is attending than remove the user because they just unjoined
+        if(isAttending){
+            userUnjoin()
+        }
+        //If the user is not attending than add the user to the event attendance
+        else{
+            userJoin()
+        }
+        //Update the button
+        updateJoinButton()
+    }
     
     override func viewDidLoad() {
         var ref: DatabaseReference!
@@ -52,7 +70,13 @@ class SingleEventController: UIViewController {
             print("Event title",title)
             print(snapshot.valueInExportFormat())
         })
-        //get list for users going to this event
+        updateAttendanceList()
+        updateJoinButton()
+    }
+    func updateAttendanceList(){
+        print ("Update Attendence List")
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         ref.child("EventAttendence").child(eventId!).observeSingleEvent(of: .value, with: {
             (snapshot) in
             if let valueDict = snapshot.value as? NSDictionary {
@@ -62,7 +86,68 @@ class SingleEventController: UIViewController {
             }
             
         })
-        print("Liams", eventId!)
+        print("New attendance list ---->" ,self.eventUsersList)
+    }
+    func updateJoinButton(){
+        print("Update Join Button")
+        //If the user is currently attending
+        if(isUserAttending()){
+            //Set the button to say unjoin and isAttending to true
+            setButtonToUnjoin()
+        }
+        else{
+            //Set the button to say join and isAttending to false
+            setButtonToJoin()
+        }
+    }
+    
+    func userJoin(){
+        print("User Join")
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid as! String
+        let userEmail = Auth.auth().currentUser?.email as! String
+        ref.child("EventAttendence")
+            .child(eventId!)
+            .child(userID)
+            .setValue(userEmail)
+        updateAttendanceList()
+    }
+    
+    func userUnjoin(){
+        print("User Unjoin")
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid as! String
+        let userEmail = Auth.auth().currentUser?.email as! String
+        ref.child("EventAttendence")
+            .child(eventId!)
+            .child(userID)
+            .removeValue()
+        updateAttendanceList()
+    }
+    
+    func isUserAttending() -> Bool{
+        let userEmail = Auth.auth().currentUser?.email as! String
+        if(eventUsersList.contains(userEmail)) {return true}
+        else{return false}
+    }
+    func setButtonToJoin(){
+        print("Set button to join")
+        //Set button to green and title to "Join"
+        JoinButton.backgroundColor = UIColor.green
+        JoinButton.setTitle("Join",for: .normal)
+        //Set isAttending to false
+        isAttending = false
+    }
+    
+    func setButtonToUnjoin(){
+        print("Set button to unjoin")
+        //Set button to orange and title to "Unjoin"
+        JoinButton.backgroundColor = UIColor.orange
+        JoinButton.setTitle("Unjoin",for: .normal)
+        //Set isAttending to true
+        isAttending = true
     }
     
     func renderSingleEventView(event: Event) {
@@ -74,29 +159,7 @@ class SingleEventController: UIViewController {
         DescriptionOutlet.text = event.description
     }
 
-    @IBAction func joinEvent(_ sender: UIButton) {
-        print("JOINED")
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
-        
-        let userID = Auth.auth().currentUser?.uid as! String
-        let userEmail = Auth.auth().currentUser?.email as! String
-        print("USER ID HERE!",userID)
-        print("PRINT", eventId!)
-        
-//    ref.child("UserProfile").child(userID).observeSingleEvent(of: .value, with: {
-//            (snapshot) in
-//        print("SHOULD BE EMAIL",snapshot.value(forKey: userID))
-//
-//        })
-//
-        ref.child("EventAttendence")
-            .child(eventId!)
-            .child(userID)
-            .setValue(userEmail)
-    
-    }
+
     @IBAction func ViewUsersSegue(_ sender: UIButton) {
         self.performSegue(withIdentifier: "ViewUsersSegue", sender: self)
     }
@@ -107,9 +170,13 @@ class SingleEventController: UIViewController {
         }
     }
     
+    
+    
     @IBAction func BackToMap(_ sender: UIButton) {
         self.performSegue(withIdentifier: "BackToMap", sender: self)
     }
+    
+    
     
     
 }
