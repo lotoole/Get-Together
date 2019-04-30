@@ -18,6 +18,10 @@ class SingleEventController: UIViewController {
     @IBOutlet weak var HostedByOutlet: UITextView!
     
     
+    @IBAction func BackButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "BackButton", sender: self)
+    }
+    
     
     override func viewDidLoad() {
         var ref: DatabaseReference!

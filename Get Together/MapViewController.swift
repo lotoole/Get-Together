@@ -25,6 +25,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
 
     }
+    @IBAction func BackButton(segue: UIStoryboardSegue) { }
+    
     override func viewDidAppear(_ animated: Bool){
 //        super.viewWillAppear(animated)
         print("DID APPEAR")

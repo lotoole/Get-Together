@@ -580,6 +580,17 @@
                                     <action selector="ViewAttendance:" destination="uZX-FK-zxo" eventType="touchUpInside" id="M3W-FF-lZq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-jF-IaT">
+                                <rect key="frame" x="354" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButton:" destination="uZX-FK-zxo" eventType="touchUpInside" id="iYi-mT-Cva"/>
+                                    <segue destination="0lF-L7-u4i" kind="unwind" identifier="BackButton" unwindAction="BackButtonWithSegue:" id="jlJ-jY-iyA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pgw-Ao-gz0"/>
@@ -593,6 +604,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srr-e3-V8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0lF-L7-u4i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1024.6376811594205" y="841.74107142857144"/>
         </scene>
