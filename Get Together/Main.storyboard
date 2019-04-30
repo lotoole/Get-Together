@@ -218,6 +218,34 @@
             </objects>
             <point key="canvasLocation" x="3526" y="133"/>
         </scene>
+        <!--Single Event Users Controller-->
+        <scene sceneID="Wjr-gR-jPY">
+            <objects>
+                <tableViewController id="cen-DZ-WNs" customClass="SingleEventUsersController" customModule="Get_Together" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P6H-vd-fiz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friend" id="1hP-S2-cTp" customClass="Friend">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1hP-S2-cTp" id="Daj-Ig-CKr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cen-DZ-WNs" id="KgD-ti-KHh"/>
+                            <outlet property="delegate" destination="cen-DZ-WNs" id="onc-sS-y9Z"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-rG-bDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="1578"/>
+        </scene>
         <!--Add Event-->
         <scene sceneID="TfN-q5-zO0">
             <objects>
@@ -437,6 +465,8 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ViewAttendance:" destination="uZX-FK-zxo" eventType="touchUpInside" id="M3W-FF-lZq"/>
+                                    <action selector="ViewUsersSegue:" destination="uZX-FK-zxo" eventType="touchUpInside" id="QS0-Lt-OrI"/>
+                                    <segue destination="cen-DZ-WNs" kind="showDetail" identifier="ViewUsersSegue" id="h7k-pJ-fLZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr8-tb-kvv">

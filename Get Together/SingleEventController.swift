@@ -11,6 +11,7 @@ import Firebase
 class SingleEventController: UIViewController {
     var eventId: String!
     var currentEvent: Event!
+    var eventUsersList: Array<String> = []
    
     @IBOutlet weak var TitleOutlet: UILabel!
     @IBOutlet weak var AddressOutlet: UILabel!
@@ -51,6 +52,16 @@ class SingleEventController: UIViewController {
             print("Event title",title)
             print(snapshot.valueInExportFormat())
         })
+        //get list for users going to this event
+        ref.child("EventAttendence").child(eventId!).observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            if let valueDict = snapshot.value as? NSDictionary {
+                for(_, value) in valueDict {
+                    self.eventUsersList.append(value as! String)
+                }
+            }
+            
+        })
         print("Liams", eventId!)
     }
     
@@ -62,23 +73,7 @@ class SingleEventController: UIViewController {
         HostedByOutlet.text = event.createdBy
         DescriptionOutlet.text = event.description
     }
-    
-    @IBAction func ViewAttendance(_ sender: UIButton) {
 
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        ref.child("EventAttendence").child(eventId!).observeSingleEvent(of: .value, with: {
-            (snapshot) in
-            let valueDict = snapshot.value as? NSDictionary
-            print("dict",valueDict!)
-            
-            let event: NSObject = valueDict! as NSObject
-            print("event!",event)
-            
-            //GET EMAIL
-        })
-        
-    }
     @IBAction func joinEvent(_ sender: UIButton) {
         print("JOINED")
         var ref: DatabaseReference!
@@ -102,4 +97,15 @@ class SingleEventController: UIViewController {
             .setValue(userEmail)
     
     }
+    @IBAction func ViewUsersSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "ViewUsersSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let seuc = segue.destination as? SingleEventUsersController {
+            seuc.users = self.eventUsersList
+        }
+    }
+    
+    
 }

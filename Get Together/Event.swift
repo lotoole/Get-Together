@@ -17,6 +17,7 @@ class Event {
     var time: String!
     var description: String!
     
+    
     init(id:String, title:String, longitude:Double, latitude:Double, address:String, createdBy:String, time:String, description: String) {
         self.id = id
         self.title = title
