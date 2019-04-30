@@ -13,7 +13,12 @@ class SingleEventUsersController: UITableViewController {
     var users: Array<String> = []
     
     override func viewDidLoad() {
-        
+        //add button for adding events
+        let button = UIButton(frame: CGRect(x: 300, y: 10, width: 80, height: 25))
+        button.backgroundColor = .green
+        button.setTitle("Back", for: .normal)
+        button.addTarget(self, action: #selector(returnToEvent), for: .touchUpInside)
+        view.addSubview(button)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +33,11 @@ class SingleEventUsersController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         friendsIndex = indexPath.row
-        performSegue(withIdentifier: "SingleFriendSegue", sender: self)
+    }
+    
+    //call the add event function when button clicked
+    @IBAction func returnToEvent(_ sender: UIButton!) {
+        self.performSegue(withIdentifier: "ReturnToEventSegue", sender: self)
     }
 
 }

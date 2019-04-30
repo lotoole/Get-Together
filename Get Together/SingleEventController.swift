@@ -111,5 +111,6 @@ class SingleEventController: UIViewController {
         self.performSegue(withIdentifier: "BackToMap", sender: self)
     }
     
-    
+    @IBAction func returnToEvent(segue: UIStoryboardSegue) {
+    }
 }
