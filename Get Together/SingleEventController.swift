@@ -97,7 +97,7 @@ class SingleEventController: UIViewController {
             .setValue(userEmail)
     
     }
-    @IBAction func ViewUsersSegue(_ sender: Any) {
+    @IBAction func ViewUsersSegue(_ sender: UIButton) {
         self.performSegue(withIdentifier: "ViewUsersSegue", sender: self)
     }
     
@@ -105,6 +105,10 @@ class SingleEventController: UIViewController {
         if let seuc = segue.destination as? SingleEventUsersController {
             seuc.users = self.eventUsersList
         }
+    }
+    
+    @IBAction func BackToMap(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "BackToMap", sender: self)
     }
     
     

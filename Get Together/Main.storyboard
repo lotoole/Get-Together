@@ -464,7 +464,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ViewAttendance:" destination="uZX-FK-zxo" eventType="touchUpInside" id="M3W-FF-lZq"/>
                                     <action selector="ViewUsersSegue:" destination="uZX-FK-zxo" eventType="touchUpInside" id="QS0-Lt-OrI"/>
                                     <segue destination="cen-DZ-WNs" kind="showDetail" identifier="ViewUsersSegue" id="h7k-pJ-fLZ"/>
                                 </connections>
@@ -473,6 +472,9 @@
                                 <rect key="frame" x="328" y="54" width="66" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="BackToMap:" destination="uZX-FK-zxo" eventType="touchUpInside" id="ZxB-Uk-rEo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -484,9 +486,11 @@
                         <outlet property="HostedByOutlet" destination="MSt-6b-1TD" id="YSt-SP-seb"/>
                         <outlet property="TimeOutlet" destination="TN0-Dx-kZt" id="YAl-fI-GnZ"/>
                         <outlet property="TitleOutlet" destination="nBb-af-ClZ" id="Tzh-F7-f9l"/>
+                        <segue destination="nJG-iA-da1" kind="unwind" identifier="BackToMap" unwindAction="BackToMapWithSegue:" id="riD-xG-XYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srr-e3-V8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nJG-iA-da1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1024.6376811594205" y="841.74107142857144"/>
         </scene>
@@ -673,7 +677,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zCA-M8-ayV"/>
-        <segue reference="y9b-cM-p1u"/>
+        <segue reference="tfg-2R-gnB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

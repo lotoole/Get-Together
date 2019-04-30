@@ -9,13 +9,11 @@
 import UIKit
 import Firebase
 class SingleEventUsersController: UITableViewController {
-    var eventKey: String!
     var userIndex = 0
     var users: Array<String> = []
     
     override func viewDidLoad() {
         
-        print(eventKey)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
