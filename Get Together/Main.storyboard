@@ -657,18 +657,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a29-dW-sSE">
-                                <rect key="frame" x="138" y="355" width="46" height="30"/>
+                                <rect key="frame" x="160" y="399" width="94" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="KlZ-zp-b6E" eventType="touchUpInside" id="Vvv-Y5-aGX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jC0-xb-Nr9"/>
                     </view>
+                    <connections>
+                        <segue destination="wXf-o6-iPR" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="a0o-Yu-Y5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wym-Ks-avG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wXf-o6-iPR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="843"/>
+            <point key="canvasLocation" x="3648" y="848"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5dG-D8-XfH">
