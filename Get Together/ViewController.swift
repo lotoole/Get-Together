@@ -84,18 +84,17 @@ class ViewController: UIViewController {
             print("Incorrect input")
             return
         }
-        Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
-            if let error = error {
-                print("error",error.localizedDescription)
-                return
-            } 
-            print(user!)
-            guard let strongSelf = self else { return }
-            
-            // ...
-            
+        else{
+            Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
+                if let error = error {
+                    print("error",error.localizedDescription)
+                    return
+                }
+                print(user!)
+//                self.performSegue(withIdentifier: "navigatetosignup", sender: nil)
+                guard let strongSelf = self else { return }
+            }
         }
-        
     }
     
 }
