@@ -9,7 +9,7 @@
 import UIKit
 
 //this array will be of settings objects from the database
-var settings = ["Anonomous", "Tesing"]
+var settings = ["Log out"]
 var myIndex = 0
 class SettingsViewController2: UITableViewController {
     

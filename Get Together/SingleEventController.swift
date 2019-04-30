@@ -48,17 +48,43 @@ class SingleEventController: UIViewController {
         AddressOutlet.text = event.address
     }
     
+    @IBAction func ViewAttendance(_ sender: UIButton) {
+
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("EventAttendence").child(eventId!).observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            let valueDict = snapshot.value as? NSDictionary
+            print("dict",valueDict!)
+            
+            let event: NSObject = valueDict! as NSObject
+            print("event!",event)
+            
+            //GET EMAIL
+        })
+        
+    }
     @IBAction func joinEvent(_ sender: UIButton) {
         print("JOINED")
         var ref: DatabaseReference!
         ref = Database.database().reference()
+        
+        
         let userID = Auth.auth().currentUser?.uid as! String
+        let userEmail = Auth.auth().currentUser?.email as! String
         print("USER ID HERE!",userID)
         print("PRINT", eventId!)
+        
+//    ref.child("UserProfile").child(userID).observeSingleEvent(of: .value, with: {
+//            (snapshot) in
+//        print("SHOULD BE EMAIL",snapshot.value(forKey: userID))
+//
+//        })
+//
         ref.child("EventAttendence")
             .child(eventId!)
             .child(userID)
-            .setValue(userID)
+            .setValue(userEmail)
     
     }
 }

@@ -23,13 +23,14 @@ class ViewController: UIViewController {
     
     @IBAction func OnChangeSignUpPassword(_ sender: Any) {
     }
-    
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
     
     @IBAction func RegisterUser(_ sender: UIButton) {
         print("REGISTER")
         print(self.EmailSignUp.text!)
         print(self.PasswordSignUp.text!)
         print(EmailSignUp.text!.isEmpty)
+        print(PasswordSignUp.text!.isEmpty)
         if(EmailSignUp.text!.isEmpty || PasswordSignUp.text!.isEmpty) {
             print("what is this")
             return
@@ -37,13 +38,14 @@ class ViewController: UIViewController {
 
         Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
             authResult, error in
-
+            let uid = authResult!.user.uid as String
+            print("GetUID",uid)
             if let error = error {
                 print("error",error.localizedDescription)
                 return
             } else {
                 print("This is good")
-
+                // Segue
             }
         }
 
@@ -62,11 +64,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Email.delegate = self
-//        Password.delegate = self
-//        Email.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-//        Password.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-//        
+ 
     }
     
     @IBAction func user(_ sender: Any) {
@@ -82,19 +80,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func click(_ sender: UIButton) {
-        var email = "tao@gmail.com"
-        var pass = "tao123"
-        
-        Auth.auth().signIn(withEmail: email, password: pass) { [weak self] user, error in
+        if(self.Email.text!.isEmpty || self.Password.text!.isEmpty) {
+            print("Incorrect input")
+            return
+        }
+        Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
+            if let error = error {
+                print("error",error.localizedDescription)
+                return
+            } 
             print(user!)
             guard let strongSelf = self else { return }
             
             // ...
             
         }
-        print(Email.text)
-        print(Password.text)
-
+        
     }
     
 }
