@@ -64,6 +64,7 @@ class AddEventController: UIViewController {
                         "latitude":self.eventCoordinate.latitude,
                         "address":self.eventAddress,
                         "description":self.eventDescription,
+                        "time":self.eventTime,
                         "createdBy":"UPDATE"
                         ])
             }

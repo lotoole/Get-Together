@@ -14,6 +14,52 @@ class ViewController: UIViewController {
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
     
+    @IBOutlet weak var EmailSignUp: UITextField!
+    
+    @IBOutlet weak var PasswordSignUp: UITextField!
+    
+    @IBAction func OnChangeSignUpEmail(_ sender: Any) {
+    }
+    
+    @IBAction func OnChangeSignUpPassword(_ sender: Any) {
+    }
+    
+    
+    @IBAction func RegisterUser(_ sender: UIButton) {
+        print("REGISTER")
+        print(self.EmailSignUp.text!)
+        print(self.PasswordSignUp.text!)
+        print(EmailSignUp.text!.isEmpty)
+        if(EmailSignUp.text!.isEmpty || PasswordSignUp.text!.isEmpty) {
+            print("what is this")
+            return
+        }
+
+        Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
+            authResult, error in
+
+            if let error = error {
+                print("error",error.localizedDescription)
+                return
+            } else {
+                print("This is good")
+
+            }
+        }
+
+    }
+    
+    @IBAction func BackToSignIn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "navigatetosignin", sender: nil)
+    
+    }
+    
+    
+    @IBAction func SignUpButton(_ sender: UIButton) {
+        print("hello world")
+        self.performSegue(withIdentifier: "navigatetosignup", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        Email.delegate = self
