@@ -57,6 +57,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 let address: String = event.value(forKey:"address")! as! String
                 let createdBy: String = event.value(forKey:"createdBy")! as! String
                 let time: String = event.value(forKey:"time")! as! String
+                let description: String = event.value(forKey: "description")! as! String
                 let eventDTO = Event(
                  id: "12knd2",
                  title: title,
@@ -64,7 +65,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                  latitude: latitude,
                  address: address,
                  createdBy: createdBy,
-                 time: time
+                 time: time,
+                 description: description
                 )
                  self.eventList.append(eventDTO)
                 
