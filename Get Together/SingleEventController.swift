@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class SingleEventController: UIViewController {
     var eventId: String!
    
@@ -20,8 +20,26 @@ class SingleEventController: UIViewController {
     
     
     override func viewDidLoad() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         
-        print("Liams", eventId)
+        ref.child("Events").child(eventId!).observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            let valueDict = snapshot.value as? NSDictionary
+            
+            
+            let event: NSObject = valueDict! as NSObject
+            let title: String = event.value(forKey:"title")! as! String
+            let longitude: Double = event.value(forKey:"longitude")! as! Double
+            let latitude: Double = event.value(forKey:"latitude")! as! Double
+            let address: String = event.value(forKey:"address")! as! String
+            let createdBy: String = event.value(forKey:"createdBy")! as! String
+            let time: String = event.value(forKey:"time")! as! String
+            print("Event title",title)
+            print(snapshot.valueInExportFormat())
+        })
+        print("Liams", eventId!)
+        
     }
     
     func renderSingleEventView(event: Event) {
