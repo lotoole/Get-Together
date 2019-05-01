@@ -70,7 +70,6 @@
                                 </state>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gy0-3C-iqL"/>
-                                    <segue destination="Ez8-wl-4ls" kind="showDetail" id="zCA-M8-ayV"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-fu-W2a">
@@ -100,6 +99,7 @@
                     <connections>
                         <outlet property="Email" destination="irh-Os-1Km" id="Qxk-Z2-fWV"/>
                         <outlet property="Password" destination="otW-Qg-ofR" id="DWF-F7-2Px"/>
+                        <segue destination="Ez8-wl-4ls" kind="showDetail" identifier="LogInSuccessSegue" id="bhq-QX-6Ff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -630,7 +630,7 @@
                                     <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="RegisterUser:" destination="5hF-rD-Vsj" eventType="touchUpInside" id="4c4-h8-Nzv"/>
+                                    <action selector="CreateAccountSegue:" destination="5hF-rD-Vsj" eventType="touchUpInside" id="b1f-Ts-B0x"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-it-voV">
@@ -660,6 +660,7 @@
                     <connections>
                         <outlet property="EmailSignUp" destination="XWR-bE-GL0" id="UoP-8O-oXH"/>
                         <outlet property="PasswordSignUp" destination="BEC-3v-8dp" id="lR7-mr-nUH"/>
+                        <segue destination="Ez8-wl-4ls" kind="showDetail" identifier="SignUpSegue" id="lJK-I9-5y6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmP-E4-tdG" sceneMemberID="firstResponder"/>
@@ -676,8 +677,8 @@
         <image name="starbucks.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zCA-M8-ayV"/>
-        <segue reference="tfg-2R-gnB"/>
+        <segue reference="bhq-QX-6Ff"/>
+        <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
