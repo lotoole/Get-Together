@@ -54,9 +54,7 @@ class SingleEventController: UIViewController {
             print("Event title",title)
             print(snapshot.valueInExportFormat())
         })
-        updateAttendanceList (
-            completion:updateButtonOnAttendanceFinish
-        )
+        updateAttendanceList{updateButtonOnAttendanceFinish()}
 
     }
     
@@ -122,6 +120,7 @@ class SingleEventController: UIViewController {
                     self.eventUsersList.append(value)
                     if(value.elementsEqual(userEmail)){
                         self.isAttending = true
+                        self.updateJoinButton()
                     }
                 }
             }
@@ -164,7 +163,6 @@ class SingleEventController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid as! String
-        let userEmail = Auth.auth().currentUser?.email as! String
         ref.child("EventAttendence")
             .child(eventId!)
             .child(userID)
