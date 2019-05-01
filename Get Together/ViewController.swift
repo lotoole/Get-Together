@@ -100,7 +100,7 @@ class ViewController: UIViewController {
                 if let error = error {
                     print("error",error.localizedDescription)
                     //display error to user
-                    let alertController = UIAlertController(title: "Error", message: "You did not enter an email or password", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
                     
