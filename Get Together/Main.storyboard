@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,7 +146,7 @@
         <!--Item-->
         <scene sceneID="wS1-mL-0Hf">
             <objects>
-                <viewController id="Lyj-5h-rF5" sceneMemberID="viewController">
+                <viewController id="Lyj-5h-rF5" customClass="FriendsViewController" customModule="Get_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ntv-1m-AmO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.27450980390000002" green="0.83137254900000002" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="39" id="wsD-ka-gYZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="39" id="wsD-ka-gYZ">
                                         <rect key="frame" x="0.0" y="28" width="374" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsD-ka-gYZ" id="Jkw-yF-yIh">
@@ -185,7 +185,7 @@
                                 <rect key="frame" x="20" y="44" width="374" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BnF-Ou-lsC">
+                                    <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="BnF-Ou-lsC">
                                         <rect key="frame" x="8" y="8" width="358" height="56"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -198,6 +198,9 @@
                                         <state key="normal" title="Add Friend">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="AddFriend:" destination="Lyj-5h-rF5" eventType="touchUpInside" id="Fjm-9M-uep"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,6 +210,9 @@
                         <viewLayoutGuide key="safeArea" id="gr1-E3-6jX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2oU-1a-2og"/>
+                    <connections>
+                        <outlet property="SearchFriends" destination="BnF-Ou-lsC" id="rZP-Oi-cXW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQN-nl-Ls0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -916,10 +922,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Explore" width="46" height="45"/>
-        <image name="Friends" width="46" height="46"/>
+        <image name="Explore" width="23" height="22.5"/>
+        <image name="Friends" width="23" height="23"/>
         <image name="Login.png" width="2048" height="1125"/>
-        <image name="Setting" width="46" height="46"/>
+        <image name="Setting" width="23" height="23"/>
         <image name="facebook.png" width="415" height="421"/>
         <image name="google2.png" width="361" height="304"/>
         <image name="inst.png" width="354" height="337"/>

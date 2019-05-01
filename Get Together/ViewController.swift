@@ -86,8 +86,9 @@ class ViewController: UIViewController {
         }
         Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
             if let error = error {
-                print("error",error.localizedDescription)
+                print("e\rron\n\n\nkkkkkkkr",error.localizedDescription)
                 return
+            
             } 
             print(user!)
             guard let strongSelf = self else { return }

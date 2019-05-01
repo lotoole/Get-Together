@@ -37,7 +37,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        print("USER ID HERE!",userID)
+        print("USER ID HERE MAP!",userID)
         ref.child("Events").observeSingleEvent(of: .value, with:{
             (snapshot) in
             
