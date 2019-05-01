@@ -25,30 +25,35 @@ class ViewController: UIViewController {
     }
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
     
-    @IBAction func RegisterUser(_ sender: UIButton) {
-        print("REGISTER")
-        print(self.EmailSignUp.text!)
-        print(self.PasswordSignUp.text!)
-        print(EmailSignUp.text!.isEmpty)
-        print(PasswordSignUp.text!.isEmpty)
+    @IBAction func CreateAccountSegue(_ sender: Any) {
         if(EmailSignUp.text!.isEmpty || PasswordSignUp.text!.isEmpty) {
             print("what is this")
+            //display error to user
+            let alertController = UIAlertController(title: "Error", message: "You did not enter an email or password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
             return
         }
-
         Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
             authResult, error in
-            let uid = authResult!.user.uid as String
-            print("GetUID",uid)
+            //            let uid = authResult!.user.uid as! String
+            //            print("GetUID",uid)
             if let error = error {
-                print("error",error.localizedDescription)
+                print("User input error",error.localizedDescription)
+                //display error to user
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
                 return
             } else {
-                print("This is good")
-                // Segue
+                print("should segue to map")
+                self.performSegue(withIdentifier: "SignUpSegue", sender: UIViewController.self)
             }
         }
-
     }
     
     @IBAction func BackToSignIn(_ sender: UIButton) {
@@ -82,21 +87,34 @@ class ViewController: UIViewController {
     @IBAction func click(_ sender: UIButton) {
         if(self.Email.text!.isEmpty || self.Password.text!.isEmpty) {
             print("Incorrect input")
+            //display error to user
+            let alertController = UIAlertController(title: "Error", message: "You did not enter an email or password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
             return
         }
-        Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
-            if let error = error {
-                print("e\rron\n\n\nkkkkkkkr",error.localizedDescription)
-                return
-            
-            } 
-            print(user!)
-            guard let strongSelf = self else { return }
-            
-            // ...
-            
+
+        else{
+            Auth.auth().signIn(withEmail: self.Email.text!, password: self.Password.text!) { [weak self] user, error in
+                if let error = error {
+                    print("error",error.localizedDescription)
+                    //display error to user
+                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self?.present(alertController, animated: true, completion: nil)
+                    return
+                } else {
+                    self?.performSegue(withIdentifier: "LogInSuccessSegue", sender: self)
+                }
+                print(user!)
+                guard let strongSelf = self else { return }
+            }
+
         }
-        
     }
     
 }

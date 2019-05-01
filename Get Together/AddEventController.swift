@@ -54,7 +54,8 @@ class AddEventController: UIViewController {
                 self.eventDescription += self.DescriptionOutlet.text!
                 self.eventCoordinate = placemark.location?.coordinate
                 //POST data to an event the user has
-
+                let userID = Auth.auth().currentUser?.uid as! String
+                let userEmail = Auth.auth().currentUser?.email as! String
                 //Missing ID and CreatedBY
                 ref.child("Events")
                     .child(self.eventTitle)
@@ -65,7 +66,7 @@ class AddEventController: UIViewController {
                         "address":self.eventAddress,
                         "description":self.eventDescription,
                         "time":self.eventTime,
-                        "createdBy":"UPDATE"
+                        "createdBy":userEmail
                         ])
             }
     }
