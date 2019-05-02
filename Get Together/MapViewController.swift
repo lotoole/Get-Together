@@ -43,22 +43,25 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         let userID = Auth.auth().currentUser?.uid
         print("USER ID HERE!",userID)
         //var invites = Array<Invite> = []
-        ref.child("Invites").observeSingleEvent(of: .value, with:{
+        ref.child("Invites").child(userID!).observeSingleEvent(of: .value, with:{
             (snapshot) in
             let valueDict = snapshot.value as? NSDictionary
             if(snapshot.hasChildren()){
                 
                 
-                for(key, _) in valueDict! {
+                for(key, value) in valueDict! {
+                    print("Something", valueDict![key])
+                    print("Key: ", key)
+                    print("Value: ", value)
                     let invite:NSObject = valueDict![key] as! NSObject
+                    print("To's result")
+                    print(invite.value(forKey: "to"))
                     //only add to arrays if you have been invited to an event, if no invites print that
-                    if(invite.value(forKey: "to") as? String == userID){
-                        let to = invite.value(forKey: "to")
-                        let inviteEventSingleId = invite.value(forKey: "event")
-                        self.inviteEventIdList.append(inviteEventSingleId as! String)
-                        self.invitesList.append(to as! String)
-                        print(inviteEventSingleId)
-                    }
+                    let to = invite.value(forKey: "to")
+                    let inviteEventSingleId = invite.value(forKey: "event")
+                    self.inviteEventIdList.append(inviteEventSingleId as! String)
+                    self.invitesList.append(to as! String)
+                    print(inviteEventSingleId)
                 }
             }
         }){
