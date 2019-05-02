@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var eventList : Array<Event> = []
     var eventId: String!
     var invitesList : Array<String> = []
+    var inviteEventIdList: Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +50,12 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 
                 
                 for(key, _) in valueDict! {
-                    var invite:NSObject = valueDict![key] as! NSObject
-                    var to = invite.value(forKey: "to")
+                    let invite:NSObject = valueDict![key] as! NSObject
+                    let to = invite.value(forKey: "to")
+                    let inviteEventSingleId = invite.value(forKey: "event")
+                    self.inviteEventIdList.append(inviteEventSingleId as! String)
+                    self.invitesList.append(to as! String)
+                    print(inviteEventSingleId)
                 }
             }
         }){
@@ -172,7 +177,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             aec.userLocation = mapView.userLocation?.coordinate
         }
         if let itv = segue.destination as? InvitesTableViewController {
-//            itv.inviteArray = invitesList
+            itv.inviteArray = invitesList
+            itv.inviteEventIds = inviteEventIdList
         }
     }
     

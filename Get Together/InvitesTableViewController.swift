@@ -7,11 +7,12 @@
 //
 import UIKit
 
-var inviteArray = ["Log out", "Testing"]
 var inviteIndex = 0
-var inviteEventId = ""
 
 class InvitesTableViewController: UITableViewController {
+    var inviteEventId = "Liam Test 2"
+    var inviteEventIds: Array<String>!
+    var inviteArray: Array<String>!
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inviteArray.count
@@ -19,12 +20,13 @@ class InvitesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "invite", for: indexPath)
         
-        cell.textLabel?.text = inviteArray[indexPath.row]
+        cell.textLabel?.text = inviteArray[indexPath.row] as! String
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         inviteIndex = indexPath.row
+        inviteEventId = inviteEventIds[indexPath.row]
         performSegue(withIdentifier: "ViewEventFromInvite", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
