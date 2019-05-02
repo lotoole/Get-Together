@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1911.2" y="132.68365817091455"/>
         </scene>
-        <!--Item-->
+        <!--Friends-->
         <scene sceneID="wS1-mL-0Hf">
             <objects>
-                <viewController id="Lyj-5h-rF5" customClass="FriendsViewController" customModule="Get_Together" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lyj-5h-rF5" userLabel="Friends" customClass="FriendsViewController" customModule="Get_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ntv-1m-AmO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,13 +164,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-EN-zh6">
-                                                    <rect key="frame" x="9" y="3" width="298" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-hu-y8w">
                                                     <rect key="frame" x="315" y="2" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -180,6 +173,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lyj-5h-rF5" id="7fk-KJ-LnK"/>
+                                    <outlet property="delegate" destination="Lyj-5h-rF5" id="mpY-Kk-Rsw"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-HD-AWO">
                                 <rect key="frame" x="20" y="44" width="374" height="125"/>
@@ -776,10 +773,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcF-Cg-4kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2025" y="-587"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Friends" width="46" height="46"/>
+        <image name="Friends" width="23" height="23"/>
         <image name="Login.png" width="2048" height="1125"/>
         <image name="facebook.png" width="415" height="421"/>
         <image name="google2.png" width="361" height="304"/>

@@ -27,7 +27,7 @@ class SingleEventUsersController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        friendsIndex = indexPath.row
+        userIndex = indexPath.row
         performSegue(withIdentifier: "SingleFriendSegue", sender: self)
     }
 

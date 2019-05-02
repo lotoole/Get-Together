@@ -51,6 +51,17 @@ class ViewController: UIViewController {
                 return
             } else {
                 print("should segue to map")
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                var username = self.EmailSignUp.text! as! String
+                let atSymbolIndex = username.index(of: "@")
+                let parsedUsername = username.substring(to: atSymbolIndex!)
+                
+                ref.child("UserProfiles")
+                .child(parsedUsername)
+                    .setValue([parsedUsername:authResult?.user.uid])
+                
+                
                 self.performSegue(withIdentifier: "SignUpSegue", sender: UIViewController.self)
             }
         }

@@ -16,6 +16,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var coordinatesNewEvent:CLLocationCoordinate2D!
     var eventList : Array<Event> = []
     var eventId: String!
+    var friendsArray : Array<NSObject> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DID LOAD")
@@ -31,6 +32,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
         renderMapEvents(events : self.eventList)
     }
+    
+    
 
     func getAllEvents(){
         print("Getting all events")
@@ -137,6 +140,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     @IBAction func BackToMap(segue: UIStoryboardSegue) {}
+    
     
    
 }
