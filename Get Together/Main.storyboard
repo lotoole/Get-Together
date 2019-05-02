@@ -363,7 +363,9 @@
                         <outlet property="DescriptionOutlet" destination="Qg0-Qb-hMu" id="NS3-66-OyB"/>
                         <outlet property="TimeOutlet" destination="t8G-Eh-rG6" id="b8e-RM-p9y"/>
                         <outlet property="TitleOutlet" destination="okD-ce-1Hu" id="9dH-bN-xli"/>
-                        <outlet property="searchDisplayController" destination="XD1-Bd-vw2" id="4X5-uM-RSB"/>
+
+                        <segue destination="MAh-8t-cg8" kind="showDetail" identifier="EventAddedSegue" id="LDs-hd-Icf"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CG-jG-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,7 +419,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="joinEvent:" destination="uZX-FK-zxo" eventType="touchUpInside" id="l1V-dc-Krg"/>
+                                    <action selector="JoinButtonPressed:" destination="uZX-FK-zxo" eventType="touchUpInside" id="ods-ph-TJi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwN-gC-z9A">
@@ -493,6 +495,7 @@
                         <outlet property="AddressOutlet" destination="b4q-I3-7uL" id="FMa-UP-NXw"/>
                         <outlet property="DescriptionOutlet" destination="5em-2U-y7f" id="z5G-O2-kPz"/>
                         <outlet property="HostedByOutlet" destination="MSt-6b-1TD" id="YSt-SP-seb"/>
+                        <outlet property="JoinButton" destination="0K4-1f-Aqx" id="omP-mx-3WK"/>
                         <outlet property="TimeOutlet" destination="TN0-Dx-kZt" id="YAl-fI-GnZ"/>
                         <outlet property="TitleOutlet" destination="nBb-af-ClZ" id="Tzh-F7-f9l"/>
                         <segue destination="nJG-iA-da1" kind="unwind" identifier="BackToMap" unwindAction="BackToMapWithSegue:" id="riD-xG-XYs"/>
@@ -811,8 +814,9 @@
         <image name="starbucks.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tcr-Wz-3Oz"/>
-        <segue reference="bhq-QX-6Ff"/>
+
+        <segue reference="LDs-hd-Icf"/>
+        <segue reference="qcu-Su-5BQ"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
