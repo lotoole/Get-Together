@@ -246,6 +246,49 @@
             </objects>
             <point key="canvasLocation" x="1025" y="1578"/>
         </scene>
+        <!--InvitesTable-->
+        <scene sceneID="DES-6f-vAd">
+            <objects>
+                <tableViewController id="cIO-fx-rsg" userLabel="InvitesTable" customClass="InvitesTableViewController" customModule="Get_Together" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okl-lZ-fJd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zov-7c-ahg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back"/>
+                            <connections>
+                                <action selector="BackToMap:" destination="cIO-fx-rsg" eventType="touchUpInside" id="4Md-xN-xPk"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="invite" id="Ngv-06-wwR">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ngv-06-wwR" id="g4y-T4-Gqs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uZX-FK-zxo" kind="showDetail" identifier="ViewEventFromInvite" id="1I7-ML-phX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cIO-fx-rsg" id="XMk-6B-Bdr"/>
+                            <outlet property="delegate" destination="cIO-fx-rsg" id="742-Nn-kFk"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="hlw-HD-lm0" kind="unwind" identifier="BackToMapFromInvites" unwindAction="BackToMapWithSegue:" id="s1h-I1-yGz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkb-nT-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hlw-HD-lm0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="1660"/>
+        </scene>
         <!--Add Event-->
         <scene sceneID="TfN-q5-zO0">
             <objects>
@@ -510,6 +553,7 @@
                     <connections>
                         <segue destination="0fb-qk-0ss" kind="presentation" identifier="AddEventSegue" id="Grk-mF-k5Z"/>
                         <segue destination="uZX-FK-zxo" kind="showDetail" identifier="SingleEventTransfer" id="nct-Qy-Eqd"/>
+                        <segue destination="cIO-fx-rsg" kind="showDetail" identifier="ViewInvitesSegue" id="4R6-OY-OCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO6-N2-hcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -680,6 +724,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LDs-hd-Icf"/>
+        <segue reference="1I7-ML-phX"/>
         <segue reference="qcu-Su-5BQ"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>

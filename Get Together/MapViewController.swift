@@ -16,12 +16,16 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     var coordinatesNewEvent:CLLocationCoordinate2D!
     var eventList : Array<Event> = []
     var eventId: String!
+    var invitesList : Array<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DID LOAD")
         generateMapView()
         addCreateEventButton()
+        addViewInvitesButton()
         getAllEvents()
+        getInvites()
 
 
     }
@@ -30,6 +34,29 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         print("DID APPEAR")
 
         renderMapEvents(events : self.eventList)
+    }
+    
+    func getInvites(){
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid
+        print("USER ID HERE!",userID)
+        //var invites = Array<Invite> = []
+        ref.child("Invites").observeSingleEvent(of: .value, with:{
+            (snapshot) in
+            let valueDict = snapshot.value as? NSDictionary
+            if(snapshot.hasChildren()){
+                
+                
+                for(key, _) in valueDict! {
+                    var invite:NSObject = valueDict![key] as! NSObject
+                    var to = invite.value(forKey: "to")
+                }
+            }
+        }){
+            (error) in
+            print(error.localizedDescription)
+        }
     }
 
     func getAllEvents(){
@@ -85,6 +112,19 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         view.addSubview(button)
     }
+    func addViewInvitesButton() {
+        //add button for adding events
+        let viewInvitesButton = UIButton(frame: CGRect(x: 15, y: 675, width: 100, height: 50))
+        viewInvitesButton.backgroundColor = .green
+        viewInvitesButton.setTitle("View Invites", for: .normal)
+        viewInvitesButton.addTarget(self, action: #selector(addViewInvitesClicked), for: .touchUpInside)
+        view.addSubview(viewInvitesButton)
+    }
+    //call the add event function when button clicked
+    @objc func addViewInvitesClicked(_ sender: UIButton!) {
+        self.performSegue(withIdentifier: "ViewInvitesSegue", sender: self)
+    }
+    
     func generateMapView(){
         let url = URL(string: "mapbox://styles/mapbox/streets-v11")
         mapView = MGLMapView(frame: view.bounds, styleURL: url)
@@ -130,6 +170,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         }
         if let aec = segue.destination as? AddEventController {
             aec.userLocation = mapView.userLocation?.coordinate
+        }
+        if let itv = segue.destination as? InvitesTableViewController {
+//            itv.inviteArray = invitesList
         }
     }
     
