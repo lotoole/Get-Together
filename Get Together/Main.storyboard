@@ -733,7 +733,6 @@
             </objects>
             <point key="canvasLocation" x="1259" y="-586"/>
         </scene>
-
         <!--InviteFriends-->
         <scene sceneID="tbO-SL-xqd">
             <objects>
@@ -774,7 +773,6 @@
             </objects>
             <point key="canvasLocation" x="-97" y="884"/>
         </scene>
-
         <!--Update Profile-->
         <scene sceneID="l5T-0l-Cbt">
             <objects>
@@ -891,7 +889,6 @@
                 <exit id="svv-cv-upI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="1652.6785714285713"/>
-
         </scene>
     </scenes>
     <resources>
@@ -903,19 +900,9 @@
         <image name="starbucks.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-
-        <segue reference="U5F-kD-Bj5"/>
-        <segue reference="bhq-QX-6Ff"/>
-
-
-
-        <segue reference="RVi-NN-8vu"/>
-
-
         <segue reference="LDs-hd-Icf"/>
-
+        <segue reference="RVi-NN-8vu"/>
         <segue reference="qcu-Su-5BQ"/>
-
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
