@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		291D607622728DB4005A1DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291D607522728DB4005A1DB3 /* Main.storyboard */; };
+		2937BDE1227A5703009F6000 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937BDE0227A5703009F6000 /* UpdateProfile.swift */; };
 		293F361C227279C8009F675F /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F361B227279C8009F675F /* close.png */; };
 		293F362422727D51009F675F /* google2.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362322727D51009F675F /* google2.png */; };
 		293F362622727FDE009F675F /* createEvent.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362522727FDE009F675F /* createEvent.png */; };
@@ -73,6 +74,7 @@
 		057F40283D3425765E456BFE /* Pods-Get TogetherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.release.xcconfig"; sourceTree = "<group>"; };
 		0C0B7DCB7C86B8F9C7C17FB7 /* Pods-Get TogetherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		291D607522728DB4005A1DB3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2937BDE0227A5703009F6000 /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		293F361B227279C8009F675F /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		293F362322727D51009F675F /* google2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google2.png; sourceTree = "<group>"; };
 		293F362522727FDE009F675F /* createEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createEvent.png; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				ECBF6D1822482123003F2AEF /* ViewController.swift */,
 				ECA21458225F896B0004B6AD /* MapViewController.swift */,
 				291D607522728DB4005A1DB3 /* Main.storyboard */,
+				2937BDE0227A5703009F6000 /* UpdateProfile.swift */,
 				EC882654227625B700EA0B38 /* SingleSettingController.swift */,
 				EC882656227627D200EA0B38 /* SingleFriendController.swift */,
 				EC0D1055227101AC00E34C9D /* AddEventController.swift */,
@@ -568,6 +571,7 @@
 				EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */,
 				ECA985652278D8A300787E43 /* SingleEventUsersController.swift in Sources */,
 				ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */,
+				2937BDE1227A5703009F6000 /* UpdateProfile.swift in Sources */,
 				EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
