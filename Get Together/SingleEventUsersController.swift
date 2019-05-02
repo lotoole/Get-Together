@@ -30,5 +30,10 @@ class SingleEventUsersController: UITableViewController {
         friendsIndex = indexPath.row
         performSegue(withIdentifier: "SingleFriendSegue", sender: self)
     }
+    
+    @IBAction func BackToEvent(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "BackToSingleEvent", sender: UIButton.self)
+    }
+    
 
 }

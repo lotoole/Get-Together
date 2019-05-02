@@ -232,4 +232,6 @@ class SingleEventController: UIViewController {
         }
     }
     
+    @IBAction func BackToEvent(segue: UIStoryboardSegue) {}
+    
 }
