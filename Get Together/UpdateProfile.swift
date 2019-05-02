@@ -29,18 +29,54 @@ class UpdateProfile: UIViewController {
         print(self.newName.text!)
         print("update name")
         
+        if(self.newName.text!.isEmpty) {
+            
+            //display error to user
+            let alertController = UIAlertController(title: "Error", message: "You did not enter a name", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = self.newName.text!
         changeRequest?.commitChanges { (error) in
-            // ...
+            if let error = error {
+                print("User input error",error.localizedDescription)
+                //display error to user
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
         }
     }
     
     @IBAction func updateEmail(_ sender: UIButton) {
         print(self.newEmail.text!)
+        if(self.newEmail.text!.isEmpty) {
+            //display error to user
+            let alertController = UIAlertController(title: "Error", message: "You did not enter an email", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         Auth.auth().currentUser?.updateEmail(to: self.newEmail.text!) { (error) in
-            print("ERROROROROR",error)
-            // ...
+            if let error = error{
+                print("User input error",error.localizedDescription)
+                //display error to user
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
         let current = Auth.auth().currentUser?.email
         print(current)
@@ -50,8 +86,25 @@ class UpdateProfile: UIViewController {
     }
     @IBAction func updatePassword(_ sender: UIButton) {
         print(self.newPassword.text!)
+        if(self.newPassword.text!.isEmpty) {
+            //display error to user
+            let alertController = UIAlertController(title: "Error", message: "You did not enter a password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         Auth.auth().currentUser?.updatePassword(to: self.newPassword.text!) { (error) in
-            // ...
+            if let error = error{
+                print("User input error",error.localizedDescription)
+                //display error to user
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
 
         print("update password")
