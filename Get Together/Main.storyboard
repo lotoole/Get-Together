@@ -363,6 +363,7 @@
                         <outlet property="DescriptionOutlet" destination="Qg0-Qb-hMu" id="NS3-66-OyB"/>
                         <outlet property="TimeOutlet" destination="t8G-Eh-rG6" id="b8e-RM-p9y"/>
                         <outlet property="TitleOutlet" destination="okD-ce-1Hu" id="9dH-bN-xli"/>
+                        <segue destination="MAh-8t-cg8" kind="showDetail" identifier="EventAddedSegue" id="LDs-hd-Icf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CG-jG-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -677,7 +678,8 @@
         <image name="starbucks.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bhq-QX-6Ff"/>
+        <segue reference="LDs-hd-Icf"/>
+        <segue reference="qcu-Su-5BQ"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

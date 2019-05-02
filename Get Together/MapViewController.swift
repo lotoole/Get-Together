@@ -128,6 +128,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         if let sec = segue.destination as? SingleEventController {
             sec.eventId = eventId
         }
+        if let aec = segue.destination as? AddEventController {
+            aec.userLocation = mapView.userLocation?.coordinate
+        }
     }
     
     //get user location once the map is fully loaded
