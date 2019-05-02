@@ -11,16 +11,23 @@ import UIKit
 import Firebase
 class InviteFriendsViewController: UITableViewController {
     var userIndex = 0
-    var friends: Array<String> = ["Cam","Gabe"]
+    var friends: Array<String> = []
+    var friendsId: Array<String> = []
     var eventId : String! = ""
    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        requestFriendsListData()
+//
+//    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath)
         
-       
         cell.textLabel?.text = friends[indexPath.row]
         return cell
     }
@@ -36,19 +43,46 @@ class InviteFriendsViewController: UITableViewController {
     }
     
     func inviteFriend(friendName: String){
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid as! String
         let userEmail = Auth.auth().currentUser?.email as! String
         let inviteKey = eventId + userID
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         ref.child("Invites")
-            .child(inviteKey)
+            .child(userID)
+            .childByAutoId()
             .setValue(["to":friendName,"from":userEmail,"event":eventId])
     }
     
     
     @IBAction func BackToSingleEvent(_ sender: UIButton) {
         self.performSegue(withIdentifier: "BackToSingleEvent", sender: UIButton.self)
+    }
+    
+    func requestFriendsListData() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid as! String
+        ref.child("UserFriends")
+            .child(userID)
+            .observeSingleEvent(of: .value, with:{
+                (snapshot) in
+                
+                print("Snap Children",snapshot.hasChildren())
+                if let valueDict = snapshot.value as? NSDictionary {
+                    for(key, value) in valueDict {
+                        let single = valueDict[key] as? NSDictionary
+                        for(key, value) in single! {
+                            //append the key and value to the two arrays
+                            self.friends.append(value as! String)
+                            self.friendsId.append(key as! String)
+                        }
+                    }
+                }
+            }){
+                (error) in
+                print(error.localizedDescription)
+        }
     }
     
 }
