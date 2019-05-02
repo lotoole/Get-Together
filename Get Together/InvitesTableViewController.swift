@@ -10,7 +10,7 @@ import UIKit
 var inviteIndex = 0
 
 class InvitesTableViewController: UITableViewController {
-    var inviteEventId = "Liam Test 2"
+    var inviteEventId: String!
     var inviteEventIds: Array<String>!
     var inviteArray: Array<String>!
     
@@ -26,7 +26,8 @@ class InvitesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         inviteIndex = indexPath.row
-        inviteEventId = inviteEventIds[indexPath.row]
+        self.inviteEventId = inviteEventIds[indexPath.row]
+        print("This should be the event id: ", inviteEventIds[indexPath.row])
         performSegue(withIdentifier: "ViewEventFromInvite", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

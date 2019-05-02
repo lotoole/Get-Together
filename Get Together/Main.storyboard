@@ -270,9 +270,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="uZX-FK-zxo" kind="showDetail" identifier="ViewEventFromInvite" id="1I7-ML-phX"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -282,6 +279,7 @@
                     </tableView>
                     <connections>
                         <segue destination="hlw-HD-lm0" kind="unwind" identifier="BackToMapFromInvites" unwindAction="BackToMapWithSegue:" id="s1h-I1-yGz"/>
+                        <segue destination="uZX-FK-zxo" kind="showDetail" identifier="ViewEventFromInvite" id="RVi-NN-8vu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkb-nT-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -724,7 +722,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LDs-hd-Icf"/>
-        <segue reference="1I7-ML-phX"/>
+        <segue reference="RVi-NN-8vu"/>
         <segue reference="qcu-Su-5BQ"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
