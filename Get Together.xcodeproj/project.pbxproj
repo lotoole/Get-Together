@@ -20,8 +20,11 @@
 		76D59F842081C79D88D1066F /* Pods_Get_TogetherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780E465B0500BAB910AA1C92 /* Pods_Get_TogetherUITests.framework */; };
 		9A9475E6789B93CC3920B075 /* Pods_Get_TogetherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */; };
 		E446C5222277507700702B21 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446C5212277507700702B21 /* Event.swift */; };
+		E4D329F0227A7E650034EFC5 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */; };
 		EC0D10542270FE2900E34C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */; };
 		EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1055227101AC00E34C9D /* AddEventController.swift */; };
+		EC35C63E227A7ED200F0CF19 /* InvitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */; };
+		EC36E9E3227A912600C48EB0 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36E9E2227A912600C48EB0 /* Invite.swift */; };
 		EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */; };
 		EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882654227625B700EA0B38 /* SingleSettingController.swift */; };
 		EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882656227627D200EA0B38 /* SingleFriendController.swift */; };
@@ -89,8 +92,11 @@
 		A28D70032F4F099C8AF53489 /* Pods_Get_TogetherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_TogetherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFACF39F3DE4CDA750EA5B90 /* Pods-Get Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Together.release.xcconfig"; path = "Target Support Files/Pods-Get Together/Pods-Get Together.release.xcconfig"; sourceTree = "<group>"; };
 		E446C5212277507700702B21 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC0D1055227101AC00E34C9D /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesTableViewController.swift; sourceTree = "<group>"; };
+		EC36E9E2227A912600C48EB0 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
 		EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewConroller2.swift; sourceTree = "<group>"; };
 		EC882654227625B700EA0B38 /* SingleSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSettingController.swift; sourceTree = "<group>"; };
 		EC882656227627D200EA0B38 /* SingleFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFriendController.swift; sourceTree = "<group>"; };
@@ -216,6 +222,12 @@
 				E446C5212277507700702B21 /* Event.swift */,
 				EC9CA8E822778F0D004BBEEA /* SingleEventController.swift */,
 				ECA985642278D8A300787E43 /* SingleEventUsersController.swift */,
+
+				E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */,
+
+				EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */,
+				EC36E9E2227A912600C48EB0 /* Invite.swift */,
+
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -564,10 +576,13 @@
 				EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */,
 				E446C5222277507700702B21 /* Event.swift in Sources */,
 				EC9CA8E922778F0D004BBEEA /* SingleEventController.swift in Sources */,
+				EC35C63E227A7ED200F0CF19 /* InvitesTableViewController.swift in Sources */,
+				EC36E9E3227A912600C48EB0 /* Invite.swift in Sources */,
 				EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */,
 				ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */,
 				EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */,
 				ECA21459225F896B0004B6AD /* MapViewController.swift in Sources */,
+				E4D329F0227A7E650034EFC5 /* InviteFriendsViewController.swift in Sources */,
 				EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */,
 				ECA985652278D8A300787E43 /* SingleEventUsersController.swift in Sources */,
 				ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */,

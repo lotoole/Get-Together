@@ -13,6 +13,8 @@ class SingleEventController: UIViewController {
     var currentEvent: Event!
     var eventUsersList: Array<String> = []
     var isAttending = false
+    var friendsInvite: Array<String> = []
+    var friendsInviteId: Array<String> = []
    
     @IBOutlet weak var TitleOutlet: UILabel!
     @IBOutlet weak var AddressOutlet: UILabel!
@@ -55,7 +57,7 @@ class SingleEventController: UIViewController {
             print(snapshot.valueInExportFormat())
         })
         updateAttendanceList{updateButtonOnAttendanceFinish()}
-
+        requestFriendsListData()
     }
     
     func renderSingleEventView(event: Event) {
@@ -75,6 +77,13 @@ class SingleEventController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let seuc = segue.destination as? SingleEventUsersController {
             seuc.users = self.eventUsersList
+        }
+        if let ifvc = segue.destination as? InviteFriendsViewController {
+            ifvc.eventId = self.eventId
+        }
+        if let ifc = segue.destination as? InviteFriendsViewController {
+            ifc.friends = friendsInvite
+            ifc.friendsId = friendsInviteId
         }
     }
     
@@ -188,4 +197,39 @@ class SingleEventController: UIViewController {
         //Set isAttending to true
         isAttending = true
     }
+    
+    
+    @IBAction func InviteFriendsSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "InviteFriendsSegue", sender: self)
+    }
+    
+    @IBAction func BackToSingleEvent(segue: UIStoryboardSegue) {}
+    
+    
+    func requestFriendsListData() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid as! String
+        ref.child("UserFriends")
+            .child(userID)
+            .observeSingleEvent(of: .value, with:{
+                (snapshot) in
+                
+                print("Snap Children",snapshot.hasChildren())
+                if let valueDict = snapshot.value as? NSDictionary {
+                    for(key, value) in valueDict {
+                        let single = valueDict[key] as? NSDictionary
+                        for(key, value) in single! {
+                            //append the key and value to the two arrays
+                            self.friendsInvite.append(value as! String)
+                            self.friendsInviteId.append(key as! String)
+                        }
+                    }
+                }
+            }){
+                (error) in
+                print(error.localizedDescription)
+        }
+    }
+    
 }
