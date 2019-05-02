@@ -9,7 +9,7 @@
 import UIKit
 
 //this array will be of settings objects from the database
-var settings = ["Log out"]
+var settings = ["Update Profile","Log out"]
 var myIndex = 0
 class SettingsViewController2: UITableViewController {
     
@@ -25,7 +25,13 @@ class SettingsViewController2: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
+        
+        if (myIndex == 0) {
         performSegue(withIdentifier: "SingleSettingSegue", sender: self)
+        }
+        else {
+            performSegue(withIdentifier: "LogOut", sender: self)
+        }
     }
     //------------------------------------------------------------------
     

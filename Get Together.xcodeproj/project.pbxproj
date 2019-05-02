@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		291D607622728DB4005A1DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291D607522728DB4005A1DB3 /* Main.storyboard */; };
+		2937BDE1227A5703009F6000 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937BDE0227A5703009F6000 /* UpdateProfile.swift */; };
 		293F361C227279C8009F675F /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F361B227279C8009F675F /* close.png */; };
 		293F362422727D51009F675F /* google2.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362322727D51009F675F /* google2.png */; };
 		293F362622727FDE009F675F /* createEvent.png in Resources */ = {isa = PBXBuildFile; fileRef = 293F362522727FDE009F675F /* createEvent.png */; };
@@ -22,6 +23,8 @@
 		E4D329F0227A7E650034EFC5 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */; };
 		EC0D10542270FE2900E34C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */; };
 		EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1055227101AC00E34C9D /* AddEventController.swift */; };
+		EC35C63E227A7ED200F0CF19 /* InvitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */; };
+		EC36E9E3227A912600C48EB0 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36E9E2227A912600C48EB0 /* Invite.swift */; };
 		EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */; };
 		EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882654227625B700EA0B38 /* SingleSettingController.swift */; };
 		EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC882656227627D200EA0B38 /* SingleFriendController.swift */; };
@@ -74,6 +77,7 @@
 		057F40283D3425765E456BFE /* Pods-Get TogetherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherTests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherTests/Pods-Get TogetherTests.release.xcconfig"; sourceTree = "<group>"; };
 		0C0B7DCB7C86B8F9C7C17FB7 /* Pods-Get TogetherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get TogetherUITests.release.xcconfig"; path = "Target Support Files/Pods-Get TogetherUITests/Pods-Get TogetherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		291D607522728DB4005A1DB3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2937BDE0227A5703009F6000 /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		293F361B227279C8009F675F /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		293F362322727D51009F675F /* google2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google2.png; sourceTree = "<group>"; };
 		293F362522727FDE009F675F /* createEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createEvent.png; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		EC0D10532270FE2900E34C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC0D1055227101AC00E34C9D /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesTableViewController.swift; sourceTree = "<group>"; };
+		EC36E9E2227A912600C48EB0 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
 		EC88265222761A1000EA0B38 /* SettingsViewConroller2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewConroller2.swift; sourceTree = "<group>"; };
 		EC882654227625B700EA0B38 /* SingleSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSettingController.swift; sourceTree = "<group>"; };
 		EC882656227627D200EA0B38 /* SingleFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFriendController.swift; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 				ECBF6D1822482123003F2AEF /* ViewController.swift */,
 				ECA21458225F896B0004B6AD /* MapViewController.swift */,
 				291D607522728DB4005A1DB3 /* Main.storyboard */,
+				2937BDE0227A5703009F6000 /* UpdateProfile.swift */,
 				EC882654227625B700EA0B38 /* SingleSettingController.swift */,
 				EC882656227627D200EA0B38 /* SingleFriendController.swift */,
 				EC0D1055227101AC00E34C9D /* AddEventController.swift */,
@@ -215,7 +222,12 @@
 				E446C5212277507700702B21 /* Event.swift */,
 				EC9CA8E822778F0D004BBEEA /* SingleEventController.swift */,
 				ECA985642278D8A300787E43 /* SingleEventUsersController.swift */,
+
 				E4D329EF227A7E650034EFC5 /* InviteFriendsViewController.swift */,
+
+				EC35C63D227A7ED200F0CF19 /* InvitesTableViewController.swift */,
+				EC36E9E2227A912600C48EB0 /* Invite.swift */,
+
 			);
 			path = "Get Together";
 			sourceTree = "<group>";
@@ -564,6 +576,8 @@
 				EC8826592276283700EA0B38 /* FriendsViewController.swift in Sources */,
 				E446C5222277507700702B21 /* Event.swift in Sources */,
 				EC9CA8E922778F0D004BBEEA /* SingleEventController.swift in Sources */,
+				EC35C63E227A7ED200F0CF19 /* InvitesTableViewController.swift in Sources */,
+				EC36E9E3227A912600C48EB0 /* Invite.swift in Sources */,
 				EC882655227625B700EA0B38 /* SingleSettingController.swift in Sources */,
 				ECBF6D1922482123003F2AEF /* ViewController.swift in Sources */,
 				EC882657227627D200EA0B38 /* SingleFriendController.swift in Sources */,
@@ -572,6 +586,7 @@
 				EC0D1056227101AC00E34C9D /* AddEventController.swift in Sources */,
 				ECA985652278D8A300787E43 /* SingleEventUsersController.swift in Sources */,
 				ECBF6D1722482123003F2AEF /* AppDelegate.swift in Sources */,
+				2937BDE1227A5703009F6000 /* UpdateProfile.swift in Sources */,
 				EC88265322761A1000EA0B38 /* SettingsViewConroller2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
