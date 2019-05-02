@@ -55,7 +55,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or login via" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-sl-eRZ">
-                                <rect key="frame" x="165" y="621" width="83" height="21"/>
+                                <rect key="frame" x="165" y="673" width="83" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,17 +69,6 @@
                                 <rect key="frame" x="176" y="725" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM3-bz-A1P">
-                                <rect key="frame" x="105" y="650" width="216" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Don't have an account? Sign up">
-                                    <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="SignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIb-7e-1Pv"/>
-                                    <segue destination="5hF-rD-Vsj" kind="showDetail" identifier="navigatetosignup" id="K9x-QJ-AEW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-fD-4Hq">
                                 <rect key="frame" x="86" y="423" width="243" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -89,6 +78,17 @@
                                 </state>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gy0-3C-iqL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM3-bz-A1P">
+                                <rect key="frame" x="99" y="642" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Don't have an account? Sign up">
+                                    <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIb-7e-1Pv"/>
+                                    <segue destination="5hF-rD-Vsj" kind="showDetail" identifier="navigatetosignup" id="K9x-QJ-AEW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -363,9 +363,7 @@
                         <outlet property="DescriptionOutlet" destination="Qg0-Qb-hMu" id="NS3-66-OyB"/>
                         <outlet property="TimeOutlet" destination="t8G-Eh-rG6" id="b8e-RM-p9y"/>
                         <outlet property="TitleOutlet" destination="okD-ce-1Hu" id="9dH-bN-xli"/>
-
                         <segue destination="MAh-8t-cg8" kind="showDetail" identifier="EventAddedSegue" id="LDs-hd-Icf"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CG-jG-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO6-N2-hcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909.5999999999999" y="839.73013493253382"/>
+            <point key="canvasLocation" x="1910" y="895"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Fr6-oB-00e">
@@ -576,11 +574,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a29-dW-sSE">
-                                <rect key="frame" x="160" y="399" width="94" height="47"/>
+                                <rect key="frame" x="154" y="400" width="106" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Log out">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="LogOutButton:" destination="KlZ-zp-b6E" eventType="touchUpInside" id="Vvv-Y5-aGX"/>
@@ -597,7 +596,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wym-Ks-avG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wXf-o6-iPR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4355" y="862"/>
+            <point key="canvasLocation" x="4353.623188405797" y="861.83035714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="k8C-be-JFC">
@@ -725,8 +724,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Waw-te-GX8">
                                 <rect key="frame" x="86" y="279" width="173" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -747,7 +746,6 @@
                                 </state>
                                 <connections>
                                     <action selector="BackToSettings:" destination="V73-Uh-OcM" eventType="touchUpInside" id="hyv-uT-Yv8"/>
-                                    <segue destination="7DU-t2-V4j" kind="showDetail" identifier="SettingsCancel" id="Tcr-Wz-3Oz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-eo-q6H">
@@ -798,9 +796,11 @@
                         <outlet property="newEmail" destination="AiI-B2-tnM" id="HCm-wY-dDO"/>
                         <outlet property="newName" destination="Waw-te-GX8" id="196-Jc-I5c"/>
                         <outlet property="newPassword" destination="T5H-O2-7B9" id="I0l-N1-nUd"/>
+                        <segue destination="svv-cv-upI" kind="unwind" identifier="SettingsCancel" unwindAction="BackToSettingsWithSegue:" id="3Wm-qj-amg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4S-e3-RNA" sceneMemberID="firstResponder"/>
+                <exit id="svv-cv-upI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="1652.6785714285713"/>
         </scene>
@@ -814,9 +814,8 @@
         <image name="starbucks.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-
-        <segue reference="LDs-hd-Icf"/>
-        <segue reference="qcu-Su-5BQ"/>
+        <segue reference="U5F-kD-Bj5"/>
+        <segue reference="bhq-QX-6Ff"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

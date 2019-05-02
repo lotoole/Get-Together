@@ -34,5 +34,5 @@ class SettingsViewController2: UITableViewController {
         }
     }
     //------------------------------------------------------------------
-    
+    @IBAction internal func BackToSettings(segue: UIStoryboardSegue){}
 }
