@@ -209,6 +209,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="2oU-1a-2og"/>
                     <connections>
                         <outlet property="SearchFriends" destination="BnF-Ou-lsC" id="rZP-Oi-cXW"/>
+                        <outlet property="taboutlet" destination="1f1-DN-5fq" id="2qA-Op-adl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQN-nl-Ls0" userLabel="First Responder" sceneMemberID="firstResponder"/>

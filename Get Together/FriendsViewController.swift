@@ -13,17 +13,24 @@ import Firebase
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var dumbyArray = ["hey","hello","yo"]
     var friendsArrayId = [""]
-    var friendsArrayName = [""]
+    var friendsArrayName = [String]()
     var friendsIndex = 0
    @IBOutlet weak var SearchFriends: UISearchBar!
     
-    @IBOutlet weak var tableView: UITableView!
+ 
     
+    @IBOutlet weak var taboutlet: UITableView!
     //----------------------------------------------------------
     
     
     //------------------------------------------------------------
-   
+    override func viewDidLoad() {
+  
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getFriends()
+        print(friendsArrayName)
+    }
     
     @IBAction func AddFriend(_ sender: UIButton) {
      
@@ -39,14 +46,19 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         ref.child("UserProfiles").child(parsedUsername).observeSingleEvent(of: .value, with:{
             (snapshot) in
             let valueDict = snapshot.value as? NSDictionary
-            var friendUID = valueDict!.value(forKey: parsedUsername) as! String
-            print(friendUID)
+            let friendUID: String
+            print(valueDict)
+            do{
+                friendUID = try valueDict!.value(forKey: parsedUsername) as! String
+            }
+            catch{
+                print("error")
+                return
+            }
             //friendsArray.append()
             for (key,_) in valueDict! {
                 
                 let contact:NSObject = valueDict![key] as! NSObject
-                print(contact)
-                print(key)
             }
             ref.child("UserFriends")
             .child(userId)
@@ -57,32 +69,64 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
             (error) in
             print("error ",error.localizedDescription)
         }
+        self.getFriends()
         
        
     }
-    override func viewDidLoad() {
-
-//        getFriends{print("DONT")}
-//        print(friendsArrayName)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-//         self.reloadInputViews()
-        getFriends{printme()}
-        print(friendsArrayName)
-    }
-    func printme(){
-        print("DONE")
-    }
     
+    func getFriends() {
+        let userId = Auth.auth().currentUser?.uid as! String
+        let userEmail = Auth.auth().currentUser?.email as! String
+        
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        ref.child("UserFriends").child(userId).observeSingleEvent(of: .value, with:{
+            (snapshot) in
+            if(snapshot.hasChildren()){
+                if let valueDict = snapshot.value as? NSDictionary{
+                    for (key,value) in valueDict {
+                        
+                        let profile = value as? NSDictionary
+                        for (key,value) in profile! {
+
+                            if(!self.friendsArrayName.contains(value as! String)){
+                                self.friendsArrayName.append(value as! String)
+                                self.friendsArrayId.append(key as! String)
+                            }
+                            
+                            
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        print("async",self.friendsArrayName)
+
+                        self.taboutlet.reloadData()
+                    }
+                }
+            }
+            
+        })
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dumbyArray.count
-        //return friendsArrayName.count
+        if self.friendsArrayName.count <= 0{
+            return 0
+        }
+
+        return self.friendsArrayName.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //cell.textLabel?.text = friendsArrayName[indexPath.row]
-        cell.textLabel?.text = dumbyArray[indexPath.row]
+        cell.textLabel?.text = friendsArrayName[indexPath.row]
+        print("loading view",self.friendsArrayName.count)
+//        if(self.friendsArrayName.count<=0){
+//            print("checkfriends is 0")
+//            self.getFriends{self.printme()}
+//        }
         return cell
     }
     
@@ -92,30 +136,5 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
        
     }
     //------------------------------------------------------------------
- 
-    func getFriends(completion: (()->Void)) {
-        
-        let userId = Auth.auth().currentUser?.uid as! String
-        let userEmail = Auth.auth().currentUser?.email as! String
-        
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-    
-        ref.child("UserFriends").child(userId).observeSingleEvent(of: .value, with:{
-            (snapshot) in
-            if let valueDict = snapshot.value as? NSDictionary{
-            for (key,value) in valueDict {
-                self.friendsArrayName.append(value as! String)
-                self.friendsArrayId.append(key as! String)
-                print(key)
-                print(value)
-            }
-                print(self.friendsArrayName)
-            
-            }
 
-        })
-        completion()
-    }
 }
