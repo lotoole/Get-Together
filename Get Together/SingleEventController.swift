@@ -76,6 +76,9 @@ class SingleEventController: UIViewController {
         if let seuc = segue.destination as? SingleEventUsersController {
             seuc.users = self.eventUsersList
         }
+        if let ifvc = segue.destination as? InviteFriendsViewController {
+            ifvc.eventId = self.eventId
+        }
     }
     
     
@@ -188,4 +191,13 @@ class SingleEventController: UIViewController {
         //Set isAttending to true
         isAttending = true
     }
+    
+    
+    @IBAction func InviteFriendsSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "InviteFriendsSegue", sender: self)
+    }
+    
+    @IBAction func BackToSingleEvent(segue: UIStoryboardSegue) {}
+    
+    
 }
