@@ -28,7 +28,10 @@ class InvitesTableViewController: UITableViewController {
         inviteIndex = indexPath.row
         self.inviteEventId = inviteEventIds[indexPath.row]
         print("This should be the event id: ", inviteEventIds[indexPath.row])
-        performSegue(withIdentifier: "ViewEventFromInvite", sender: self)
+        //check to make sure there is an event
+        if(inviteEventId != nil) {
+         performSegue(withIdentifier: "ViewEventFromInvite", sender: self)
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let sec = segue.destination as? SingleEventController {

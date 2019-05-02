@@ -51,11 +51,14 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 
                 for(key, _) in valueDict! {
                     let invite:NSObject = valueDict![key] as! NSObject
-                    let to = invite.value(forKey: "to")
-                    let inviteEventSingleId = invite.value(forKey: "event")
-                    self.inviteEventIdList.append(inviteEventSingleId as! String)
-                    self.invitesList.append(to as! String)
-                    print(inviteEventSingleId)
+                    //only add to arrays if you have been invited to an event, if no invites print that
+                    if(invite.value(forKey: "to") as? String == userID){
+                        let to = invite.value(forKey: "to")
+                        let inviteEventSingleId = invite.value(forKey: "event")
+                        self.inviteEventIdList.append(inviteEventSingleId as! String)
+                        self.invitesList.append(to as! String)
+                        print(inviteEventSingleId)
+                    }
                 }
             }
         }){
