@@ -826,7 +826,6 @@
             </objects>
             <point key="canvasLocation" x="1259" y="-586"/>
         </scene>
-<<<<<<< HEAD
         <!--Table View Controller-->
         <scene sceneID="bB6-72-Gxf">
             <objects>
@@ -840,7 +839,21 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RHt-X3-amJ" id="KH0-pQ-uNE">
-=======
+<rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+<autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                        <outlet property="dataSource" destination="DYU-fb-NH6" id="tPL-0E-f5o"/>
+                        <outlet property="delegate" destination="DYU-fb-NH6" id="xdy-Ip-0uT"/>
+                        </connections>
+                </tableView>
+            </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcF-Cg-4kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </objects>
+                <point key="canvasLocation" x="2025" y="-587"/>
+            </scene>
         <!--InviteFriends-->
         <scene sceneID="tbO-SL-xqd">
             <objects>
@@ -862,36 +875,26 @@
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QtJ-1A-9M0" id="d4x-uz-Hyv">
->>>>>>> master
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-<<<<<<< HEAD
-                            <outlet property="dataSource" destination="DYU-fb-NH6" id="tPL-0E-f5o"/>
-                            <outlet property="delegate" destination="DYU-fb-NH6" id="xdy-Ip-0uT"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pcF-Cg-4kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2025" y="-587"/>
-=======
-                            <outlet property="dataSource" destination="FSr-HP-Dcq" id="wng-nB-3e0"/>
-                            <outlet property="delegate" destination="FSr-HP-Dcq" id="Zcs-2j-udu"/>
-                        </connections>
+                    <outlet property="dataSource" destination="FSr-HP-Dcq" id="wng-nB-3e0"/>
+                    <outlet property="delegate" destination="FSr-HP-Dcq" id="Zcs-2j-udu"/>
+                    </connections>
                     </tableView>
                     <connections>
-                        <segue destination="wwX-dr-eqy" kind="unwind" identifier="BackToSingleEvent" unwindAction="BackToSingleEventWithSegue:" id="ZgD-rP-XVa"/>
+                    <segue destination="wwX-dr-eqy" kind="unwind" identifier="BackToSingleEvent" unwindAction="BackToSingleEventWithSegue:" id="ZgD-rP-XVa"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AUP-fl-txt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="wwX-dr-eqy" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-97" y="884"/>
-        </scene>
+                    </tableViewController>
+                    <placeholder placeholderIdentifier="IBFirstResponder" id="AUP-fl-txt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <exit id="wwX-dr-eqy" userLabel="Exit" sceneMemberID="exit"/>
+                    </objects>
+                    <point key="canvasLocation" x="-97" y="884"/>
+                    </scene>
+
         <!--Update Profile-->
         <scene sceneID="l5T-0l-Cbt">
             <objects>
@@ -1008,7 +1011,6 @@
                 <exit id="svv-cv-upI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="1652.6785714285713"/>
->>>>>>> master
         </scene>
     </scenes>
     <resources>
