@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,10 +27,6 @@
                                 <rect key="frame" x="10" y="10" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inst.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZsJ-EI-UVC">
-                                <rect key="frame" x="272" y="725" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otW-Qg-ofR">
                                 <rect key="frame" x="86" y="341" width="242" height="30"/>
@@ -54,21 +50,6 @@
                                     <action selector="user:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="b7P-05-1aZ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or login via" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-sl-eRZ">
-                                <rect key="frame" x="165" y="673" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-fu-W2a">
-                                <rect key="frame" x="86" y="725" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google2.png" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-oh-fhe">
-                                <rect key="frame" x="176" y="725" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-fD-4Hq">
                                 <rect key="frame" x="86" y="423" width="243" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -81,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM3-bz-A1P">
-                                <rect key="frame" x="99" y="642" width="216" height="30"/>
+                                <rect key="frame" x="99" y="499" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account? Sign up">
                                     <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
@@ -437,7 +418,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Ez8-wl-4ls" kind="showDetail" id="qcu-Su-5BQ"/>
+                                    <action selector="BackToMapFromAdd:" destination="0fb-qk-0ss" eventType="touchUpInside" id="CMm-AU-hOn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Enter Your Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qg0-Qb-hMu">
@@ -498,9 +479,11 @@
                         <outlet property="TimeOutlet" destination="t8G-Eh-rG6" id="b8e-RM-p9y"/>
                         <outlet property="TitleOutlet" destination="okD-ce-1Hu" id="9dH-bN-xli"/>
                         <segue destination="MAh-8t-cg8" kind="showDetail" identifier="EventAddedSegue" id="LDs-hd-Icf"/>
+                        <segue destination="NaB-pU-hZn" kind="unwind" identifier="BackToMapFromAddEvent" unwindAction="BackToMapFromAddWithSegue:" id="B1V-KA-QbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CG-jG-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NaB-pU-hZn" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="XD1-Bd-vw2">
                     <connections>
                         <outlet property="delegate" destination="0fb-qk-0ss" id="rxm-fQ-nL8"/>
@@ -839,21 +822,21 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RHt-X3-amJ" id="KH0-pQ-uNE">
-<rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-<autoresizingMask key="autoresizingMask"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                        <outlet property="dataSource" destination="DYU-fb-NH6" id="tPL-0E-f5o"/>
-                        <outlet property="delegate" destination="DYU-fb-NH6" id="xdy-Ip-0uT"/>
+                            <outlet property="dataSource" destination="DYU-fb-NH6" id="tPL-0E-f5o"/>
+                            <outlet property="delegate" destination="DYU-fb-NH6" id="xdy-Ip-0uT"/>
                         </connections>
-                </tableView>
-            </tableViewController>
+                    </tableView>
+                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcF-Cg-4kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                </objects>
-                <point key="canvasLocation" x="2025" y="-587"/>
-            </scene>
+            </objects>
+            <point key="canvasLocation" x="2025" y="-587"/>
+        </scene>
         <!--InviteFriends-->
         <scene sceneID="tbO-SL-xqd">
             <objects>
@@ -881,20 +864,19 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                    <outlet property="dataSource" destination="FSr-HP-Dcq" id="wng-nB-3e0"/>
-                    <outlet property="delegate" destination="FSr-HP-Dcq" id="Zcs-2j-udu"/>
-                    </connections>
+                            <outlet property="dataSource" destination="FSr-HP-Dcq" id="wng-nB-3e0"/>
+                            <outlet property="delegate" destination="FSr-HP-Dcq" id="Zcs-2j-udu"/>
+                        </connections>
                     </tableView>
                     <connections>
-                    <segue destination="wwX-dr-eqy" kind="unwind" identifier="BackToSingleEvent" unwindAction="BackToSingleEventWithSegue:" id="ZgD-rP-XVa"/>
+                        <segue destination="wwX-dr-eqy" kind="unwind" identifier="BackToSingleEvent" unwindAction="BackToSingleEventWithSegue:" id="ZgD-rP-XVa"/>
                     </connections>
-                    </tableViewController>
-                    <placeholder placeholderIdentifier="IBFirstResponder" id="AUP-fl-txt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                    <exit id="wwX-dr-eqy" userLabel="Exit" sceneMemberID="exit"/>
-                    </objects>
-                    <point key="canvasLocation" x="-97" y="884"/>
-                    </scene>
-
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUP-fl-txt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wwX-dr-eqy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="884"/>
+        </scene>
         <!--Update Profile-->
         <scene sceneID="l5T-0l-Cbt">
             <objects>
@@ -1014,7 +996,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Friends" width="23" height="23"/>
+        <image name="Friends" width="46" height="46"/>
         <image name="Login.png" width="2048" height="1125"/>
         <image name="facebook.png" width="415" height="421"/>
         <image name="google2.png" width="361" height="304"/>
@@ -1024,7 +1006,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="LDs-hd-Icf"/>
         <segue reference="RVi-NN-8vu"/>
-        <segue reference="qcu-Su-5BQ"/>
+        <segue reference="bhq-QX-6Ff"/>
         <segue reference="y9b-cM-p1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27450980392156865" green="0.83137254901960778" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

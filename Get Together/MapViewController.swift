@@ -200,6 +200,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     @IBAction func BackToMap(segue: UIStoryboardSegue) {}
     
-    
+    @IBAction func BackToMapFromAdd(segue: UIStoryboardSegue) {}
    
 }

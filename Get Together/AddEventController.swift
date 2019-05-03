@@ -118,5 +118,10 @@ class AddEventController: UIViewController {
         }
         return dist
     }
+    
+    @IBAction func BackToMapFromAdd(_ sender: Any) {
+        self.performSegue(withIdentifier: "BackToMapFromAddEvent", sender: UIButton.self)
+    }
+    
 }
 
