@@ -38,8 +38,6 @@ class ViewController: UIViewController {
         }
         Auth.auth().createUser(withEmail: self.EmailSignUp.text!, password: self.PasswordSignUp.text!) {
             authResult, error in
-            //            let uid = authResult!.user.uid as! String
-            //            print("GetUID",uid)
             if let error = error {
                 print("User input error",error.localizedDescription)
                 //display error to user
