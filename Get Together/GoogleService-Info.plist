@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>482900800728-cksjnnf9373ju4s644c3924fhc8bgeid.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.482900800728-cksjnnf9373ju4s644c3924fhc8bgeid</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCRejCAVw333qsJRSSygRvvPlIgbO0gHgY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>482900800728</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>UVM.Get-Together</string>
+	<key>PROJECT_ID</key>
+	<string>gettogether-e9090</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gettogether-e9090.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:482900800728:ios:9e280a9246c176ed</string>
+	<key>DATABASE_URL</key>
+	<string>https://gettogether-e9090.firebaseio.com</string>
+</dict>
+</plist>

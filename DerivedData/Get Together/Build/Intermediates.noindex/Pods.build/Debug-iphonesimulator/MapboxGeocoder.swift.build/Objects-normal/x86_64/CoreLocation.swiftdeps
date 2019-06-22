@@ -1,0 +1,87 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "So22CLLocationCoordinate2DV"
+provides-member:
+- ["So22CLLocationCoordinate2DV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "CLLocationCoordinate2D"
+- !private "CLLocationDegrees"
+- "Codable"
+- "Decoder"
+- "Encoder"
+depends-member:
+- !private ["So22CLLocationCoordinate2DV", "CLLocationDegrees"]
+- ["So22CLLocationCoordinate2DV", "Decoder"]
+- ["So22CLLocationCoordinate2DV", "Encoder"]
+- ["So22CLLocationCoordinate2DV", "deinit"]
+- ["So22CLLocationCoordinate2DV", "encode"]
+- ["So22CLLocationCoordinate2DV", "init"]
+- !private ["So22CLLocationCoordinate2DV", "latitude"]
+- !private ["So22CLLocationCoordinate2DV", "longitude"]
+- !private ["Se", "CLLocationDegrees"]
+- ["Se", ""]
+- ["Se", "encode"]
+- ["Se", "init"]
+- !private ["Se", "latitude"]
+- !private ["Se", "longitude"]
+- !private ["s7DecoderP", "unkeyedContainer"]
+- !private ["SE", "CLLocationDegrees"]
+- ["SE", ""]
+- ["SE", "encode"]
+- ["SE", "init"]
+- !private ["SE", "latitude"]
+- !private ["SE", "longitude"]
+- !private ["s7EncoderP", "unkeyedContainer"]
+- !private ["s24UnkeyedDecodingContainerP", "decode"]
+- !private ["s24UnkeyedEncodingContainerP", "encode"]
+- !private ["s21_ObjectiveCBridgeableP", "CLLocationDegrees"]
+- ["s21_ObjectiveCBridgeableP", "encode"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "latitude"]
+- !private ["s21_ObjectiveCBridgeableP", "longitude"]
+depends-nominal:
+- "So22CLLocationCoordinate2DV"
+- "Se"
+- !private "s7DecoderP"
+- "SE"
+- !private "s7EncoderP"
+- !private "s24UnkeyedDecodingContainerP"
+- !private "s24UnkeyedEncodingContainerP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/CamWeston/Desktop/Get-Together/Pods/Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift-umbrella.h"
+- "/Users/CamWeston/Desktop/Get-Together/Pods/MapboxGeocoder.swift/MapboxGeocoder/MBPlacemarkScope.h"
+- "/Users/CamWeston/Desktop/Get-Together/Pods/MapboxGeocoder.swift/MapboxGeocoder/MapboxGeocoder.h"
+- "/Users/CamWeston/Desktop/Get-Together/DerivedData/Get Together/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/MapboxGeocoder.swift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "059cd862573eabdafdf8bea918751a88"

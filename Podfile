@@ -3,11 +3,12 @@
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'FirebaseUI'
+pod 'MapboxGeocoder.swift', '~> 0.10'
 
 pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
 pod 'FirebaseUI/Twitter'
-pod 'FirebaseUI/Phone
+pod 'FirebaseUI/Phone'
 pod 'GoogleSignIn'
 
 pod 'MapboxGeocoder.swift','~> 0.10'

@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func user(_ sender: Any) {
-        print (Email.text!)
+    
     }
   
 
 
     
     @IBAction func password(_ sender: Any) {
-        print (Password.text!)
+      
 
     }
     
@@ -46,8 +46,8 @@ class ViewController: UIViewController {
             // ...
             
         }
-        print(Email.text!)
-        print(Password.text!)
+        print(Email.text)
+        print(Password.text)
 
     }
     
