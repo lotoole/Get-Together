@@ -15,8 +15,10 @@ class Event {
     var address: String!
     var createdBy: String!
     var time: String!
+    var description: String!
     
-    init(id:String, title:String, longitude:Double, latitude:Double, address:String, createdBy:String, time:String) {
+    
+    init(id:String, title:String, longitude:Double, latitude:Double, address:String, createdBy:String, time:String, description: String) {
         self.id = id
         self.title = title
         self.longitude = longitude
@@ -24,5 +26,6 @@ class Event {
         self.address = address
         self.createdBy = createdBy
         self.time = time
+        self.description = description
     }
 }
